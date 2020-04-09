@@ -1,0 +1,57 @@
+.logo {
+    display: inline-flex !important;
+}
+
+.stunning-header {
+    padding-bottom: 60px;
+}
+
+.status-color {
+    color: #888da8;
+}
+
+.form-group.label-floating .bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    top: 8px;
+}
+
+.icon-status {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 1px;
+}
+
+
+/* .c-primary {
+    color: #38a9ff;
+} */
+
+.medium-padding35 {
+    padding: 35px 0;
+}
+
+@media (max-width: 1024px) {
+    .medium-padding50 {
+        padding: 25px 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .medium-padding50 {
+        padding: 20px 0;
+    }
+    /* #header--standard {
+        text-align: center;
+    } */
+}
+
+@media (min-width: 800px) {
+    .header--standard.headroom--not-top {
+        padding: 10px 55px;
+    }
+}
+
+.w-birthday-alert {
+    height: 310px !important;
+}
