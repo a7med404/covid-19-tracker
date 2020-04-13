@@ -19,10 +19,16 @@
                 </div>
               </a>
               <p>
-                Lorem ipsum dolor sit amet, consect adipisicing elit, sed do
-                eiusmod por incidid ut labore et lorem.
+                The latest news and updates on the COVID-19 outbreak.
+                <br />
+                Developed By <span class="c-primary"> Ahmed Ibrahim.</span>
               </p>
               <ul class="socials">
+                <li>
+                  <a href="https://github.com/a7med404" target="_blank">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  </a>
+                </li>
                 <li>
                   <a href="#">
                     <i class="fab fa-facebook-square" aria-hidden="true"></i>
@@ -31,16 +37,6 @@
                 <li>
                   <a href="#">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fab fa-google-plus-g" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
@@ -58,9 +54,9 @@
             <!-- SUB Footer -->
             <div class="sub-footer-copyright">
               <span>
-                Copyright
-                <a href="index.html">Olympus Buddypress + WP</a> All Rights
-                Reserved 2017
+                All Rights Reserved 2020 Copyright
+                <br />
+                <a href="/">a7med404</a>
               </span>
             </div>
             <!-- ... end SUB Footer -->

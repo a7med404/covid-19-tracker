@@ -1,0 +1,155 @@
+{
+    "Global": {
+        "NewConfirmed": 100282,
+        "TotalConfirmed": 1162857,
+        "NewDeaths": 5658,
+        "TotalDeaths": 63263,
+        "NewRecovered": 15405,
+        "TotalRecovered": 230845
+    },
+    "Countries": [{
+            "Country": "ALA Aland Islands",
+            "CountryCode": "AX",
+            "Slug": "ala-aland-islands",
+            "NewConfirmed": 0,
+            "TotalConfirmed": 0,
+            "NewDeaths": 0,
+            "TotalDeaths": 0,
+            "NewRecovered": 0,
+            "TotalRecovered": 0,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Afghanistan",
+            "CountryCode": "AF",
+            "Slug": "afghanistan",
+            "NewConfirmed": 18,
+            "TotalConfirmed": 299,
+            "NewDeaths": 1,
+            "TotalDeaths": 7,
+            "NewRecovered": 0,
+            "TotalRecovered": 10,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Albania",
+            "CountryCode": "AL",
+            "Slug": "albania",
+            "NewConfirmed": 29,
+            "TotalConfirmed": 333,
+            "NewDeaths": 3,
+            "TotalDeaths": 20,
+            "NewRecovered": 10,
+            "TotalRecovered": 99,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Algeria",
+            "CountryCode": "DZ",
+            "Slug": "algeria",
+            "NewConfirmed": 80,
+            "TotalConfirmed": 1251,
+            "NewDeaths": 25,
+            "TotalDeaths": 130,
+            "NewRecovered": 28,
+            "TotalRecovered": 90,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "American Samoa",
+            "CountryCode": "AS",
+            "Slug": "american-samoa",
+            "NewConfirmed": 0,
+            "TotalConfirmed": 0,
+            "NewDeaths": 0,
+            "TotalDeaths": 0,
+            "NewRecovered": 0,
+            "TotalRecovered": 0,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Andorra",
+            "CountryCode": "AD",
+            "Slug": "andorra",
+            "NewConfirmed": 27,
+            "TotalConfirmed": 466,
+            "NewDeaths": 1,
+            "TotalDeaths": 17,
+            "NewRecovered": 5,
+            "TotalRecovered": 21,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Angola",
+            "CountryCode": "AO",
+            "Slug": "angola",
+            "NewConfirmed": 2,
+            "TotalConfirmed": 10,
+            "NewDeaths": 0,
+            "TotalDeaths": 2,
+            "NewRecovered": 1,
+            "TotalRecovered": 2,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Anguilla",
+            "CountryCode": "AI",
+            "Slug": "anguilla",
+            "NewConfirmed": 0,
+            "TotalConfirmed": 0,
+            "NewDeaths": 0,
+            "TotalDeaths": 0,
+            "NewRecovered": 0,
+            "TotalRecovered": 0,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Antarctica",
+            "CountryCode": "AQ",
+            "Slug": "antarctica",
+            "NewConfirmed": 0,
+            "TotalConfirmed": 0,
+            "NewDeaths": 0,
+            "TotalDeaths": 0,
+            "NewRecovered": 0,
+            "TotalRecovered": 0,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Antigua and Barbuda",
+            "CountryCode": "AG",
+            "Slug": "antigua-and-barbuda",
+            "NewConfirmed": 0,
+            "TotalConfirmed": 15,
+            "NewDeaths": 0,
+            "TotalDeaths": 0,
+            "NewRecovered": 0,
+            "TotalRecovered": 0,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Argentina",
+            "CountryCode": "AR",
+            "Slug": "argentina",
+            "NewConfirmed": 186,
+            "TotalConfirmed": 1451,
+            "NewDeaths": 4,
+            "TotalDeaths": 43,
+            "NewRecovered": 13,
+            "TotalRecovered": 279,
+            "Date": "2020-04-05T06:37:00Z"
+        },
+        {
+            "Country": "Armenia",
+            "CountryCode": "AM",
+            "Slug": "armenia",
+            "NewConfirmed": 34,
+            "TotalConfirmed": 770,
+            "NewDeaths": 0,
+            "TotalDeaths": 7,
+            "NewRecovered": 0,
+            "TotalRecovered": 43,
+            "Date": "2020-04-05T06:37:00Z"
+        }
+    ]
+}

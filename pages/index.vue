@@ -9,8 +9,15 @@
                 <span class="c-primary">COVID-19</span> TRACKER
               </h2>
               <p class="heading-text">
-                Don’t see a position that fits you? No problem! we wanna hear
-                from you, send us an email to
+                More than
+                <span class="indicator negative bold"
+                  >{{ getCurrent.TotalConfirmed }}
+                </span>
+                person
+                <span class="indicator negative bold"
+                  >{{ getCurrent.Country || 'World Wide' }}
+                </span>
+                have been infected with the new coronavirus
               </p>
               <p>Stay Home <span class="c-primary">Stay Safe</span></p>
             </div>
@@ -18,29 +25,44 @@
         </div>
       </div>
     </section>
-    <SelectCountry />
-    <Block />
+    <Block :countires="getCountries" />
     <Symptom />
     <!-- <Guide /> -->
   </div>
 </template>
 
 <script>
-import SelectCountry from '@/components/statistics/SelectCountry'
-import Block from '@/components/statistics/Block'
+import { mapGetters, mapActions } from 'vuex'
+import Block from '@/components/Block'
 import Symptom from '@/components/Symptom'
 // import Guide from '@/components/Guide'
 export default {
   components: {
-    SelectCountry,
     Block,
     Symptom
     // Guide
+  },
+  async fetch() {
+    await this.fetchCountries()
   },
   asyncData() {
     return {
       title: 'COVID-19 Tracker title'
     }
+  },
+  data() {
+    return {
+      connectionStatus: ''
+    }
+  },
+  computed: {
+    ...mapGetters(['getCountries', 'getCurrent', 'getConnectionStatus'])
+  },
+  created() {
+    this.title = 'COVID-19 Tracker title'
+  },
+  methods: {
+    ...mapActions(['fetchCountries'])
   },
   head() {
     return {

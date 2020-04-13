@@ -8,7 +8,7 @@
       >
         <div class="container">
           <div class="header--standard-wrap">
-            <nuxt-link to="index2" class="logo">
+            <nuxt-link to="/" class="logo">
               <div class="img-wrap">
                 <img src="img/logo.png" alt="COVID-19" />
                 <img
@@ -24,13 +24,21 @@
             </nuxt-link>
             <a href="#" class="open-responsive-menu js-open-responsive-menu">
               <!-- <span class="icon-status online"></span> <span class="status-color">Real Time</span> -->
-              <span class="icon-status disconected"></span>
+              <span
+                :class="
+                  getConnectionStatus == false
+                    ? 'disconected icon-status'
+                    : 'online icon-status'
+                "
+              ></span>
               <span
                 data-toggle="tooltip"
                 data-placement="right"
                 data-original-title="Disconnected! The Data Maybe Not Accurate"
                 class="status-color"
-                >Disconnected</span
+                >{{
+                  getConnectionStatus == false ? 'Disconnected' : 'Online'
+                }}</span
               >
             </a>
             <div class="nav nav-pills nav1 header-menu">
@@ -51,7 +59,9 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  computed: mapGetters(['getConnectionStatus'])
 }
 </script>

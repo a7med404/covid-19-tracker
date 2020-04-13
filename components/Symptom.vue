@@ -8,7 +8,7 @@
             <h2 class="heading-title">Symptoms Of COVID-19</h2>
             <p class="heading-text">
               Common symptoms, which most often begin 2 to 14 days after you
-              come into contact with the virus, include:
+              come into contact with the virus, include.
             </p>
           </div>
         </div>
