@@ -37,17 +37,17 @@ export default {
             {
                 rel: 'stylesheet',
                 type: 'text/css',
-                href: '/bootstrap/dist/css/bootstrap-reboot.css'
+                href: '/css/bootstrap/bootstrap-reboot.css'
             },
             {
                 rel: 'stylesheet',
                 type: 'text/css',
-                href: '/bootstrap/dist/css/bootstrap.css'
+                href: '/css/bootstrap/bootstrap.css'
             },
             {
                 rel: 'stylesheet',
                 type: 'text/css',
-                href: '/bootstrap/dist/css/bootstrap-grid.css'
+                href: '/css/bootstrap/bootstrap-grid.css'
             },
             // <!-- Main Font -->
             {
@@ -106,7 +106,7 @@ export default {
                 body: true
             },
             {
-                src: '/bootstrap/dist/js/bootstrap.bundle.min.js',
+                src: '/js/bootstrap/bootstrap.bundle.min.js',
                 body: true
             },
             {
