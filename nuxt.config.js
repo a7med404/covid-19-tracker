@@ -163,8 +163,14 @@ export default {
     },
     pwa: {
         workbox: {
+            // dev: true,
             offlineStrategy: 'CacheFirst',
             onlineStrategy: 'NetworkFirst',
+            globPatterns: ['**/*.{js,css}', '**/img/*'],
+            offlinePage: '/404.html'
+        },
+        generate: {
+            fallback: true
         },
         icon: {
             iconSrc: "/coronavirus.png",

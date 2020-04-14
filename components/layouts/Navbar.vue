@@ -37,7 +37,7 @@
                 data-original-title="Disconnected! The Data Maybe Not Accurate"
                 class="status-color"
                 >{{
-                  getConnectionStatus == false ? 'Disconnected' : 'Online'
+                  getConnectionStatus == false ? 'Disconnected' : 'Real Time'
                 }}</span
               >
             </a>
