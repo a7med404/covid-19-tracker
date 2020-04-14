@@ -10,9 +10,9 @@
           <div class="header--standard-wrap">
             <nuxt-link to="/" class="logo">
               <div class="img-wrap">
-                <img src="img/logo.png" alt="COVID-19" />
+                <img src="/coronavirus.png" alt="COVID-19" />
                 <img
-                  src="img/logo-colored-small.png"
+                  src="/coronavirus.png"
                   alt="COVID-19"
                   class="logo-colored"
                 />
@@ -41,16 +41,6 @@
                 }}</span
               >
             </a>
-            <div class="nav nav-pills nav1 header-menu">
-              <div
-                class="mCustomScrollbar ps ps--theme_default ps--active-x ps--active-y"
-                data-ps-id="a9a4c9be-46a1-086e-70ba-95f03a1e31a7"
-              >
-                <span class="icon-status online"></span> <span>Online</span>
-                <span class="icon-status disconected"></span>
-                <span>Disconnected</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

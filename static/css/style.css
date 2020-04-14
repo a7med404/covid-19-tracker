@@ -2,6 +2,30 @@
     display: inline-flex !important;
 }
 
+.logo img {
+    width: 43px;
+}
+
+.w-about img {
+    margin-right: 2px;
+}
+
+.open-responsive-menu {
+    margin-left: auto;
+    display: block;
+}
+
+.header--standard-landing .logo .img-wrap {
+    margin-right: 3px;
+}
+
+.header--standard-wrap {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 .stunning-header {
     padding-bottom: 60px;
 }

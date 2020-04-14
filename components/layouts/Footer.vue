@@ -11,7 +11,7 @@
             <div class="widget w-about">
               <a href="02-ProfilePage.html" class="logo">
                 <div class="img-wrap">
-                  <img src="img/logo-colored.png" alt="Olympus" />
+                  <img src="/coronavirus.png" alt="Olympus" />
                 </div>
                 <div class="title-block">
                   <h6 class="logo-title">COVID-19</h6>
@@ -30,17 +30,23 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.facebook.com/a7med.free404/"
+                    target="_blank"
+                  >
                     <i class="fab fa-facebook-square" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://twitter.com/A7med__404" target="_blank">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.instagram.com/a7med_404.o/"
+                    target="_blank"
+                  >
                     <i class="fab fa-instagram" aria-hidden="true"></i>
                   </a>
                 </li>

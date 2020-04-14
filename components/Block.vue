@@ -34,7 +34,7 @@
       <div
         class="col col-xl-3 order-xl-3 col-lg-6 order-lg-3 col-md-6 col-sm-6 col-12"
       >
-        <div class="ui-block">
+        <div class="ui-block item">
           <div class="ui-block-content">
             <ul class="statistics-list-count">
               <li>
@@ -73,7 +73,7 @@
       <div
         class="col col-xl-3 order-xl-3 col-lg-6 order-lg-3 col-md-6 col-sm-6 col-12"
       >
-        <div class="ui-block">
+        <div class="ui-block item">
           <div class="ui-block-content">
             <ul class="statistics-list-count">
               <li>
@@ -110,7 +110,7 @@
       <div
         class="col col-xl-3 order-xl-3 col-lg-6 order-lg-3 col-md-6 col-sm-6 col-12"
       >
-        <div class="ui-block">
+        <div class="ui-block item">
           <div class="ui-block-content">
             <ul class="statistics-list-count">
               <li>
@@ -149,7 +149,7 @@
       <div
         class="col col-xl-3 order-xl-3 col-lg-6 order-lg-3 col-md-6 col-sm-6 col-12"
       >
-        <div class="ui-block">
+        <div class="ui-block item">
           <div class="ui-block-content">
             <ul class="statistics-list-count">
               <li>
@@ -256,6 +256,11 @@ export default {
 }
 .under-recover {
   color: #ffd52f;
+}
+@media (min-width: 531px) {
+  .item {
+    min-height: 140px !important;
+  }
 }
 @keyframes spinner {
   0% {

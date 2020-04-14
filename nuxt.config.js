@@ -163,7 +163,6 @@ export default {
     },
     pwa: {
         workbox: {
-            dev: true,
             offlineStrategy: 'CacheFirst',
             onlineStrategy: 'NetworkFirst',
         },
