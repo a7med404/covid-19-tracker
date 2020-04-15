@@ -139,14 +139,21 @@ export default {
     pwa: {
         workbox: {
             dev: true,
-            // offline: true,
+            // offline: true
             offlineStrategy: 'CacheFirst',
             onlineStrategy: 'NetworkFirst',
             globPatterns: ['**/*.{js,css}', '**/img/*'],
             // offlinePage: '/404.html',
             offlineAssets: [
-                '/coronavirus.png',
                 '/',
+                '/coronavirus.png',
+                '/img/breath.png',
+                '/img/sneeze.png',
+                '/img/fever.png',
+                '/img/headache.png',
+                '/img/chills.png',
+                '/img/fatigue.png',
+                '/svg-icons/back-to-top.svg',
                 '/css/bootstrap/bootstrap.css',
                 '/css/main.min.css',
                 '/js/bootstrap/bootstrap.bundle.min.js',
@@ -165,7 +172,7 @@ export default {
             purpose: "any "
         },
         manifest: {
-            short_name: 'COVID-19',
+            short_name: 'COVID-19 Tracker',
             name: 'COVID-19 Tracker',
             description: 'covid-19 tracker app for information',
             categories: ['education', 'medical'],
@@ -173,10 +180,10 @@ export default {
             dir: 'auto',
             lang: 'en',
             start_url: '/?source=pwa',
-            background_color: '#ff5e3a',
+            background_color: '#f4f4f4',
             display: 'standalone',
             scope: '/',
-            theme_color: '#ff5e3a'
+            theme_color: '#f4f4f4'
         }
     },
     /*

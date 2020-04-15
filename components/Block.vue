@@ -289,4 +289,7 @@ export default {
   will-change: transform;
   z-index: 1000;
 }
+.sfs {
+  color: #5f52ff;
+}
 </style>
