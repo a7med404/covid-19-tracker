@@ -19,7 +19,7 @@
                 </span>
                 have been infected with the new coronavirus. Stay Home Stay Safe
               </p>
-              <p><span class="c-primary">STAND_4_SUDAN</span></p>
+              <p><span class="c-primary">STAND_FOR_SUDAN</span></p>
             </div>
           </div>
         </div>
