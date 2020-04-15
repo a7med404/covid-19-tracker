@@ -140,7 +140,7 @@ export default {
         workbox: {
             dev: true,
             // offline: true
-            offlineStrategy: 'CacheFirst',
+            offlineStrategy: 'NetworkFirst',
             onlineStrategy: 'NetworkFirst',
             globPatterns: ['**/*.{js,css}', '**/img/*'],
             // offlinePage: '/404.html',
