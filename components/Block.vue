@@ -200,7 +200,10 @@ export default {
     }
   },
   props: {
-    countires: null
+    countires: {
+      type: Array,
+      default: null
+    }
   },
   data() {
     return {

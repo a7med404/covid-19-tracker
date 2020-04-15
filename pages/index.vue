@@ -17,9 +17,9 @@
                 <span class="indicator negative bold"
                   >{{ getCurrent.Country || 'World Wide' }}
                 </span>
-                have been infected with the new coronavirus
+                have been infected with the new coronavirus. Stay Home Stay Safe
               </p>
-              <p>Stay Home <span class="c-primary">Stay Safe</span></p>
+              <p><span class="c-primary">STAND_4_SUDAN</span></p>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default {
   },
   asyncData() {
     return {
-      title: 'COVID-19 Tracker title'
+      title: 'COVID-19 Tracker'
     }
   },
   data() {
@@ -59,7 +59,7 @@ export default {
     ...mapGetters(['getCountries', 'getCurrent', 'getConnectionStatus'])
   },
   created() {
-    this.title = 'COVID-19 Tracker title'
+    this.title = 'COVID-19 Tracker'
   },
   methods: {
     ...mapActions(['fetchCountries'])

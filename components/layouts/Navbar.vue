@@ -19,7 +19,9 @@
               </div>
               <div class="title-block">
                 <h6 class="logo-title">COVID-19</h6>
-                <div class="sub-title">COVID-19 TRACKER</div>
+                <div class="sub-title">
+                  <span class="c-primary">STAND_4_SUDAN</span>
+                </div>
               </div>
             </nuxt-link>
             <a href="#" class="open-responsive-menu js-open-responsive-menu">

@@ -149,6 +149,9 @@ export default {
                 '/',
                 '/css/bootstrap/bootstrap.css',
                 '/css/main.min.css',
+                '/js/bootstrap/bootstrap.bundle.min.js',
+                '/js/jquery-3.2.1.js',
+                '/js/bootstrap-select.js',
             ]
         },
         generate: {

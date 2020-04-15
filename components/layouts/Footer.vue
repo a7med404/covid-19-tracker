@@ -16,6 +16,7 @@
                 <div class="title-block">
                   <h6 class="logo-title">COVID-19</h6>
                   <div class="sub-title">COVID-19 TRACKER</div>
+                  <div class="c-primary">STAND_4_SUDAN</div>
                 </div>
               </a>
               <p>
