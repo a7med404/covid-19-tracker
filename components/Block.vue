@@ -245,7 +245,7 @@ export default {
           this.setCurrentCountry(this.selectedCountry[0])
           this.loading = false
         }
-      }, 500)
+      }, 350)
     }
   }
 }
