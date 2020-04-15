@@ -140,16 +140,16 @@ export default {
         workbox: {
             dev: true,
             // offline: true,
-            // offlineStrategy: 'CacheFirst',
-            // onlineStrategy: 'NetworkFirst',
-            // globPatterns: ['**/*.{js,css}', '**/img/*'],
+            offlineStrategy: 'CacheFirst',
+            onlineStrategy: 'NetworkFirst',
+            globPatterns: ['**/*.{js,css}', '**/img/*'],
             // offlinePage: '/404.html',
-            // offlineAssets: [
-            //     '/coronavirus.png',
-            //     '/index.html',
-            //     '/css/bootstrap/bootstrap.css',
-            //     '/css/main.min.css',
-            // ]
+            offlineAssets: [
+                '/coronavirus.png',
+                '/',
+                '/css/bootstrap/bootstrap.css',
+                '/css/main.min.css',
+            ]
         },
         generate: {
             fallback: true
