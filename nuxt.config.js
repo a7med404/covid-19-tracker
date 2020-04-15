@@ -37,39 +37,18 @@ export default {
             {
                 rel: 'stylesheet',
                 type: 'text/css',
-                href: '/css/bootstrap/bootstrap-reboot.css'
-            },
-            {
-                rel: 'stylesheet',
-                type: 'text/css',
                 href: '/css/bootstrap/bootstrap.css'
-            },
-            {
-                rel: 'stylesheet',
-                type: 'text/css',
-                href: '/css/bootstrap/bootstrap-grid.css'
-            },
-            // <!-- Main Font -->
-            {
-                rel: 'stylesheet',
-                type: 'text/css',
-                href: '/css/fonts.css'
             },
             // <!-- Main Styles CSS -->
             {
                 rel: 'stylesheet',
                 type: 'text/css',
-                href: '/css/main.css'
-            },
-            {
-                rel: 'stylesheet',
-                type: 'text/css',
-                href: '/css/style.css'
+                href: '/css/main.min.css'
             },
             // <!-- place this in a head section -->
             {
-                rel: "apple-touch-startup-image",
-                href: "/coronavirus.png"
+                rel: 'apple-touch-startup-image',
+                href: '/coronavirus.png'
             },
             // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
             // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
@@ -87,10 +66,6 @@ export default {
             // <!-- JS Scripts -->
             {
                 src: '/js/jquery-3.2.1.js',
-                body: true
-            },
-            {
-                src: '/js/swiper.jquery.js',
                 body: true
             },
             {
@@ -163,11 +138,18 @@ export default {
     },
     pwa: {
         workbox: {
-            // dev: true,
-            offlineStrategy: 'CacheFirst',
-            onlineStrategy: 'CacheFirst',
-            globPatterns: ['**/*.{js,css}', '**/img/*'],
-            offlinePage: '/404.html'
+            dev: true,
+            // offline: true,
+            // offlineStrategy: 'CacheFirst',
+            // onlineStrategy: 'NetworkFirst',
+            // globPatterns: ['**/*.{js,css}', '**/img/*'],
+            // offlinePage: '/404.html',
+            // offlineAssets: [
+            //     '/coronavirus.png',
+            //     '/index.html',
+            //     '/css/bootstrap/bootstrap.css',
+            //     '/css/main.min.css',
+            // ]
         },
         generate: {
             fallback: true
@@ -192,6 +174,15 @@ export default {
             display: 'standalone',
             scope: '/',
             theme_color: '#ff5e3a'
+        }
+    },
+    /*
+     ** Allow dev tools in production
+     */
+    vue: {
+        config: {
+            productionTip: false,
+            devtools: true
         }
     }
 }

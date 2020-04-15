@@ -23,7 +23,8 @@
               </div>
             </nuxt-link>
             <a href="#" class="open-responsive-menu js-open-responsive-menu">
-              <!-- <span class="icon-status online"></span> <span class="status-color">Real Time</span> -->
+              <!-- <span class="icon-status online"></span>
+              <span class="status-color">Real Time</span> -->
               <span
                 :class="
                   getConnectionStatus == false
@@ -34,7 +35,7 @@
               <span
                 data-toggle="tooltip"
                 data-placement="right"
-                data-original-title="Disconnected! The Data Maybe Not Accurate"
+                data-original-title="When You Disconnected! The Data Maybe Not Accurate"
                 class="status-color"
                 >{{
                   getConnectionStatus == false ? 'Disconnected' : 'Real Time'

@@ -2,7 +2,7 @@
 export const state = () => ({
     countries: [],
     current: {},
-    connectionStatus: false
+    connectionStatus: true
 })
 
 export const getters = {
