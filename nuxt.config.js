@@ -183,7 +183,7 @@ export default {
             background_color: '#f4f4f4',
             display: 'standalone',
             scope: '/',
-            theme_color: '#f4f4f4'
+            theme_color: '#f7f7f7'
         }
     },
     /*
