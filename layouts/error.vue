@@ -11,7 +11,7 @@ export default {
   layout: 'default'
 }
 </script>
-<style scoped>
+<style>
 .err {
   margin: 200px auto;
   text-align: center;

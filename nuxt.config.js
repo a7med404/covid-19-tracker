@@ -73,19 +73,11 @@ export default {
                 body: true
             },
             {
-                src: '/js/base-init.js',
-                body: true
-            },
-            {
                 src: '/fonts/fontawesome-all.js',
                 body: true
             },
             {
                 src: '/js/bootstrap/bootstrap.bundle.min.js',
-                body: true
-            },
-            {
-                src: '/js/script.js',
                 body: true
             }
         ]
@@ -140,12 +132,12 @@ export default {
         workbox: {
             dev: true,
             // offline: true
-            offlineStrategy: 'NetworkFirst',
+            offlineStrategy: 'CacheFirst',
             onlineStrategy: 'NetworkFirst',
             globPatterns: ['**/*.{js,css}', '**/img/*'],
             // offlinePage: '/404.html',
             offlineAssets: [
-                '/',
+                // '/',
                 '/coronavirus.png',
                 '/img/breath.png',
                 '/img/sneeze.png',
@@ -158,7 +150,7 @@ export default {
                 '/css/main.min.css',
                 '/js/bootstrap/bootstrap.bundle.min.js',
                 '/js/jquery-3.2.1.js',
-                '/js/bootstrap-select.js',
+                '/js/bootstrap-select.js'
             ]
         },
         generate: {
