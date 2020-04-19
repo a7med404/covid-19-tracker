@@ -58,6 +58,7 @@ export default {
             // { rel: "apple-touch-startup-image", href: "launch-1242x2208.png", media: "(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" },
             // { rel: "apple-touch-startup-image", href: "launch-640x1136.png", media: "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" }
         ],
+
         script: [
 
             {
