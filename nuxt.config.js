@@ -163,7 +163,7 @@ export default {
             purpose: 'any '
         },
         manifest: {
-            short_name: 'COVID-19 Tracker',
+            short_name: 'COVID-19',
             name: 'COVID-19 Tracker',
             description: 'covid-19 tracker app for information',
             categories: ['education', 'medical'],
