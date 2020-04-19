@@ -21,7 +21,7 @@ export default {
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { name: 'apple-mobile-web-app-capable', content: 'yes' },
             { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-            { name: 'apple-mobile-web-app-title', content: "COVID-19" },
+            { name: 'apple-mobile-web-app-title', content: 'COVID-19' },
             {
                 viewport: 'width=device-width, initial-scale=1, user-scalable=no',
                 mobileAppIOS: true
@@ -49,7 +49,7 @@ export default {
             {
                 rel: 'apple-touch-startup-image',
                 href: '/coronavirus.png'
-            },
+            }
             // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
             // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
             // { rel: 'apple-touch-icon', href: 'icon-152x152.png' },
@@ -59,9 +59,7 @@ export default {
             // { rel: "apple-touch-startup-image", href: "launch-640x1136.png", media: "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" }
         ],
 
-        script: [
-
-            {
+        script: [{
                 src: '/js/webfontloader.min.js'
             },
             // <!-- JS Scripts -->
@@ -133,7 +131,7 @@ export default {
         workbox: {
             dev: true,
             // offline: true
-            offlineStrategy: 'CacheFirst',
+            offlineStrategy: 'NetworkFirst',
             onlineStrategy: 'NetworkFirst',
             globPatterns: ['**/*.{js,css}', '**/img/*'],
             // offlinePage: '/404.html',
@@ -158,11 +156,11 @@ export default {
             fallback: true
         },
         icon: {
-            iconSrc: "/coronavirus.png",
-            iconFileName: "coronavirus.png",
+            iconSrc: '/coronavirus.png',
+            iconFileName: 'coronavirus.png',
             sizes: [64, 120, 144, 152, 192, 384, 512],
-            targetDir: "icons",
-            purpose: "any "
+            targetDir: 'icons',
+            purpose: 'any '
         },
         manifest: {
             short_name: 'COVID-19 Tracker',
