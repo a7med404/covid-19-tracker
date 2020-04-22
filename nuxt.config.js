@@ -133,23 +133,23 @@ export default {
             // offline: true
             offlineStrategy: 'NetworkFirst',
             onlineStrategy: 'NetworkFirst',
-            globPatterns: ['**/*.{js,css}', '**/img/*'],
+            // globPatterns: ['**/*.{js,css}', '**/img/*'],
             // offlinePage: '/404.html',
             offlineAssets: [
                 // '/',
-                '/coronavirus.png',
-                '/img/breath.png',
-                '/img/sneeze.png',
-                '/img/fever.png',
-                '/img/headache.png',
-                '/img/chills.png',
-                '/img/fatigue.png',
-                '/svg-icons/back-to-top.svg',
-                '/css/bootstrap/bootstrap.css',
-                '/css/main.min.css',
-                '/js/bootstrap/bootstrap.bundle.min.js',
-                '/js/jquery-3.2.1.js',
-                '/js/bootstrap-select.js'
+                // '/coronavirus.png',
+                // '/img/breath.png',
+                // '/img/sneeze.png',
+                // '/img/fever.png',
+                // '/img/headache.png',
+                // '/img/chills.png',
+                // '/img/fatigue.png',
+                // '/svg-icons/back-to-top.svg',
+                // '/css/bootstrap/bootstrap.css',
+                // '/css/main.min.css',
+                // '/js/bootstrap/bootstrap.bundle.min.js',
+                // '/js/jquery-3.2.1.js',
+                // '/js/bootstrap-select.js'
             ]
         },
         generate: {
