@@ -20,6 +20,7 @@
                 have been infected with the new coronavirus. Stay Home Stay Safe
               </p>
               <p><span class="c-primary">STAND_FOR_SUDAN</span></p>
+              <p v-if="getCurrent.Date">Last Update: {{ getCurrent.Date }}</p>
             </div>
           </div>
         </div>

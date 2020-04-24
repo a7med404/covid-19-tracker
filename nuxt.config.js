@@ -129,32 +129,32 @@ export default {
     },
     pwa: {
         workbox: {
-            dev: true,
-            // offline: true
-            offlineStrategy: 'NetworkFirst',
-            onlineStrategy: 'NetworkFirst',
+            // dev: true,
+            // offline: true,
+            // offlineStrategy: 'NetworkFirst',
+            // onlineStrategy: 'NetworkFirst',
             // globPatterns: ['**/*.{js,css}', '**/img/*'],
-            // offlinePage: '/404.html',
-            offlineAssets: [
-                // '/',
-                // '/coronavirus.png',
-                // '/img/breath.png',
-                // '/img/sneeze.png',
-                // '/img/fever.png',
-                // '/img/headache.png',
-                // '/img/chills.png',
-                // '/img/fatigue.png',
-                // '/svg-icons/back-to-top.svg',
-                // '/css/bootstrap/bootstrap.css',
-                // '/css/main.min.css',
-                // '/js/bootstrap/bootstrap.bundle.min.js',
-                // '/js/jquery-3.2.1.js',
-                // '/js/bootstrap-select.js'
-            ]
+            offlinePage: '/off-line',
+            // offlineAssets: [
+            //     // '/',
+            //     '/coronavirus.png',
+            //     '/img/breath.png',
+            //     '/img/sneeze.png',
+            //     '/img/fever.png',
+            //     '/img/headache.png',
+            //     '/img/chills.png',
+            //     '/img/fatigue.png',
+            //     '/svg-icons/back-to-top.svg',
+            //     '/css/bootstrap/bootstrap.css',
+            //     '/css/main.min.css',
+            //     '/js/bootstrap/bootstrap.bundle.min.js',
+            //     '/js/jquery-3.2.1.js',
+            //     '/js/bootstrap-select.js'
+            // ]
         },
-        generate: {
-            fallback: true
-        },
+        // generate: {
+        //     fallback: true
+        // },
         icon: {
             iconSrc: '/coronavirus.png',
             iconFileName: 'coronavirus.png',

@@ -9,15 +9,8 @@
                 <span class="c-primary">COVID-19</span> TRACKER
               </h2>
               <p class="heading-text">
-                More than
-                <span class="indicator negative bold"
-                  >{{ getCurrent.TotalConfirmed }}
-                </span>
-                person
-                <span class="indicator negative bold"
-                  >{{ getCurrent.Country || 'World Wide' }}
-                </span>
-                have been infected with the new coronavirus. Stay Home Stay Safe
+                Many person World Wide have been infected with the new
+                coronavirus. Stay Home Stay Safe
               </p>
               <p><span class="c-primary">STAND_FOR_SUDAN</span></p>
             </div>
@@ -26,7 +19,7 @@
       </div>
     </section>
     <div class="err">
-      <h1>'No Connection</h1>
+      <h1>No Connection</h1>
       <div>Pleace Check your Internet connection</div>
       <i class="fa fa-no-internet"></i>
     </div>
