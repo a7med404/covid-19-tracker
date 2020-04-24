@@ -25,9 +25,15 @@ export const actions = {
             commit('SET_COUNTRIES', response.data.Countries);
             commit('CURRENT_COUNTRY', response.data.Global);
             commit('SET_CONNECTION_STATUS', true);
+            console.log(
+                'Seccess request to https://api.covid19api.com/summary has been sent'
+            )
         } catch (error) {
             commit('SET_COUNTRIES', []);
             commit('SET_CONNECTION_STATUS', false);
+            console.log(
+                'Error request to https://api.covid19api.com/summary has not been sent'
+            )
             console.log(error);
         }
     },

@@ -27,22 +27,26 @@
             <a href="#" class="open-responsive-menu js-open-responsive-menu">
               <!-- <span class="icon-status online"></span>
               <span class="status-color">Real Time</span> -->
-              <span
-                :class="
-                  getConnectionStatus == false
-                    ? 'disconected icon-status'
-                    : 'online icon-status'
-                "
-              ></span>
-              <span
-                data-toggle="tooltip"
-                data-placement="right"
-                data-original-title="When You Disconnected! The Data Maybe Not Accurate"
-                class="status-color"
-                >{{
-                  getConnectionStatus == false ? 'Disconnected' : 'Real Time'
-                }}</span
-              >
+              <span v-if="getConnectionStatus">
+                <span class="online icon-status"></span>
+                <span
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  data-original-title="When You Disconnected! The Data Maybe Not Accurate"
+                  class="status-color"
+                  >Real Time</span
+                >
+              </span>
+              <span v-else>
+                <span class="disconected icon-status"></span>
+                <span
+                  data-toggle="tooltip"
+                  data-placement="right"
+                  data-original-title="When You Disconnected! The Data Maybe Not Accurate"
+                  class="status-color"
+                  >Disconnected</span
+                >
+              </span>
             </a>
           </div>
         </div>

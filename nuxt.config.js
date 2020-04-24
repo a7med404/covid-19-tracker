@@ -136,7 +136,7 @@ export default {
             // globPatterns: ['**/*.{js,css}', '**/img/*'],
             offlinePage: 'off-line',
             offlineAssets: [
-                '/',
+                // '/',
                 'coronavirus.png',
                 'img/breath.png',
                 'img/sneeze.png',

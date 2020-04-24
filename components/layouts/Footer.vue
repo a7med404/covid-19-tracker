@@ -9,7 +9,7 @@
           <div class="col col-lg-12 col-md-12 col-sm-12 col-12 text-center">
             <!-- Widget About -->
             <div class="widget w-about">
-              <a href="02-ProfilePage.html" class="logo">
+              <a href="#" class="logo">
                 <div class="img-wrap">
                   <img src="/coronavirus.png" alt="Olympus" />
                 </div>
@@ -57,6 +57,11 @@
           </div>
 
           <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
+            <!-- <a href="#" class="logo">
+              <div class="img-wrap">
+                <img src="/profile.jpg" alt="Olympus" />
+              </div>
+            </a> -->
             <!-- SUB Footer -->
             <div class="sub-footer-copyright">
               <span>
