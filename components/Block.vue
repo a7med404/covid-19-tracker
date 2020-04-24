@@ -245,6 +245,7 @@ export default {
           this.setCurrentCountry(this.selectedCountry[0])
           this.loading = false
         }
+        console.log(this.currentCountry.Date)
       }, 350)
     }
   }
