@@ -1,3 +1,68 @@
+<script>
+import { mapGetters, mapActions } from 'vuex'
+export default {
+  name: 'Block',
+  filters: {
+    percentage(newCases, totalCases) {
+      if (newCases) {
+        return Math.round((newCases / totalCases) * 100).toFixed(2) + ' %'
+      } else {
+        return 0 + '%'
+      }
+    }
+  },
+
+  data() {
+    return {
+      countries: [],
+      selectedCountry: {},
+      currentCountry: {},
+      global: {},
+      loading: false
+    }
+  },
+
+  computed: {
+    ...mapGetters(['getCountries', 'getCurrent']),
+    getTotalUnderRecover() {
+      return (
+        this.currentCountry.TotalConfirmed -
+          this.currentCountry.TotalRecovered -
+          this.currentCountry.TotalDeaths || ''
+      )
+    }
+  },
+
+  async created() {
+    await this.fetchCountries()
+    this.countries = this.getCountries
+    this.global = this.getCurrent
+    this.currentCountry = this.getCurrent
+  },
+  methods: {
+    ...mapActions(['fetchCountries', 'setCurrentCountry']),
+    changeCountry(event) {
+      this.loading = true
+      const selected = event.target.value
+      this.selectedCountry = this.countries.filter(
+        (c) => c.CountryCode === selected
+      )
+      setTimeout(() => {
+        if (selected === '') {
+          this.currentCountry = this.global
+          this.setCurrentCountry(this.global)
+          this.loading = false
+        } else {
+          this.currentCountry = this.selectedCountry[0]
+          this.setCurrentCountry(this.selectedCountry[0])
+          this.loading = false
+        }
+        console.log(this.currentCountry.Date)
+      }, 250)
+    }
+  }
+}
+</script>
 <template>
   <div>
     <div v-if="loading">
@@ -12,12 +77,12 @@
               <div class="form-group label-floating is-select">
                 <label class="control-label">Check Your Country</label>
                 <select
-                  class="selectpicker form-control"
+                  class="selectpicker- form-control"
                   @change="changeCountry($event)"
                 >
                   <option value="" selected="selected">Global</option>
                   <option
-                    v-for="(value, index) in countires"
+                    v-for="(value, index) in countries"
                     :key="index"
                     :value="value.CountryCode"
                     v-text="value.Country"
@@ -186,86 +251,25 @@
   </div>
 </template>
 
-<script>
-import { mapGetters, mapActions } from 'vuex'
-export default {
-  name: 'Block',
-  filters: {
-    percentage(newCases, totalCases) {
-      if (newCases) {
-        return Math.round((newCases / totalCases) * 100).toFixed(2) + ' %'
-      } else {
-        return 0 + '%'
-      }
-    }
-  },
-  props: {
-    countires: {
-      type: Array,
-      default: null
-    }
-  },
-  data() {
-    return {
-      selectedCountry: '',
-      global: {},
-      currentCountry: {},
-      loading: false
-    }
-  },
-  computed: {
-    ...mapGetters(['getCountries', 'getCurrent']),
-    getTotalUnderRecover() {
-      return (
-        this.currentCountry.TotalConfirmed -
-          this.currentCountry.TotalRecovered -
-          this.currentCountry.TotalDeaths || ''
-      )
-    }
-  },
-  created() {
-    this.global = this.getCurrent
-    this.currentCountry = this.getCurrent
-  },
-  methods: {
-    ...mapActions(['setCurrentCountry']),
-    changeCountry(event) {
-      this.loading = true
-      const selected = event.target.value
-      this.selectedCountry = this.countires.filter(
-        (c) => c.CountryCode === selected
-      )
-      setTimeout(() => {
-        if (selected === '') {
-          this.currentCountry = this.global
-          this.setCurrentCountry(this.global)
-          this.loading = false
-        } else {
-          this.currentCountry = this.selectedCountry[0]
-          this.setCurrentCountry(this.selectedCountry[0])
-          this.loading = false
-        }
-        console.log(this.currentCountry.Date)
-      }, 350)
-    }
-  }
-}
-</script>
 <style>
 .negative {
   color: #ff5e3a;
 }
+
 .positive {
   color: #08ddc1;
 }
+
 .under-recover {
   color: #ffd52f;
 }
+
 @media (min-width: 531px) {
   .item {
     min-height: 140px !important;
   }
 }
+
 @keyframes spinner {
   0% {
     transform: translate3d(-50%, -50%, 0) rotate(0deg);
@@ -274,6 +278,7 @@ export default {
     transform: translate3d(-50%, -50%, 0) rotate(360deg);
   }
 }
+
 .spin::before {
   animation: 1.5s linear infinite spinner;
   animation-play-state: inherit;
@@ -290,6 +295,7 @@ export default {
   will-change: transform;
   z-index: 1000;
 }
+
 .sfs {
   color: #5f52ff;
 }

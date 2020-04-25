@@ -1,3 +1,23 @@
+<script>
+import { mapGetters } from 'vuex'
+import Block from '@/components/Block'
+import Symptom from '@/components/Symptom'
+// import Guide from '@/components/Guide'
+export default {
+  components: {
+    Block,
+    Symptom
+    // Guide
+  },
+  computed: {
+    ...mapGetters(['getCurrent'])
+  }
+  // async created() {
+  //   awiat this.fetchCountries()
+  // },
+  // methods: mapActions(['fetchCountries'])
+}
+</script>
 <template>
   <div class="container">
     <section class="medium-padding35">
@@ -29,56 +49,8 @@
         </div>
       </div>
     </section>
-    <Block :countires="getCountries" />
+    <Block />
     <Symptom />
     <!-- <Guide /> -->
   </div>
 </template>
-
-<script>
-import { mapGetters, mapActions } from 'vuex'
-import Block from '@/components/Block'
-import Symptom from '@/components/Symptom'
-// import Guide from '@/components/Guide'
-export default {
-  components: {
-    Block,
-    Symptom
-    // Guide
-  },
-  async fetch() {
-    await this.fetchCountries()
-  },
-  asyncData() {
-    return {
-      title: 'COVID-19 Tracker'
-    }
-  },
-  data() {
-    return {
-      connectionStatus: ''
-    }
-  },
-  computed: {
-    ...mapGetters(['getCountries', 'getCurrent', 'getConnectionStatus'])
-  },
-  created() {
-    this.title = 'COVID-19 Tracker'
-  },
-  methods: {
-    ...mapActions(['fetchCountries'])
-  },
-  head() {
-    return {
-      title: this.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'covid-19 tracker app2'
-        }
-      ]
-    }
-  }
-}
-</script>

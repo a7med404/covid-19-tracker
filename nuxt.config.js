@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 export default {
+    // universal or spa
     mode: 'universal',
     /*
      ** Headers of the page
