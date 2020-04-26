@@ -124,7 +124,7 @@ export default {
             // offline: true,
             // offlineStrategy: 'NetworkFirst',
             // onlineStrategy: 'NetworkFirst',
-            // globPatterns: ['**/*.{js,css}', '**/img/*'],
+            globPatterns: ['**/*.{js,css}', '**/img/*'],
             offlinePage: 'off-line',
             offlineAssets: [
                 '/',

@@ -34,10 +34,12 @@ export default {
   },
 
   async created() {
+    this.loading = true
     await this.fetchCountries()
     this.countries = this.getCountries
     this.global = this.getCurrent
     this.currentCountry = this.getCurrent
+    this.loading = false
   },
   methods: {
     ...mapActions(['fetchCountries', 'setCurrentCountry']),
