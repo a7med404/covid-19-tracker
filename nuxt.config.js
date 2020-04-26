@@ -60,24 +60,14 @@ export default {
             // { rel: "apple-touch-startup-image", href: "launch-640x1136.png", media: "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" }
         ],
 
-        script: [{
-                src: '/js/webfontloader.min.js'
-            },
+        script: [
             // <!-- JS Scripts -->
             {
                 src: '/js/jquery-3.2.1.js',
                 body: true
             },
             {
-                src: '/js/bootstrap-select.js',
-                body: true
-            },
-            {
                 src: '/fonts/fontawesome-all.js',
-                body: true
-            },
-            {
-                src: '/js/bootstrap/bootstrap.bundle.min.js',
                 body: true
             }
         ]
@@ -137,7 +127,7 @@ export default {
             // globPatterns: ['**/*.{js,css}', '**/img/*'],
             offlinePage: 'off-line',
             offlineAssets: [
-                // '/',
+                '/',
                 'coronavirus.png',
                 'img/breath.png',
                 'img/sneeze.png',
@@ -148,9 +138,7 @@ export default {
                 'svg-icons/back-to-top.svg',
                 'css/bootstrap/bootstrap.css',
                 'css/main.min.css',
-                'js/bootstrap/bootstrap.bundle.min.js',
-                'js/jquery-3.2.1.js',
-                'js/bootstrap-select.js'
+                'js/jquery-3.2.1.js'
             ]
         },
         generate: {

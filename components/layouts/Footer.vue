@@ -23,6 +23,15 @@
                 <br />
                 Developed By <span class="c-primary"> Ahmed Ibrahim.</span>
               </p>
+              <a href="#" class="logo profile">
+                <div class="img-wrap">
+                  <img src="/profile.jpg" alt="Olympus" />
+                </div>
+                <div class="title-block">
+                  <h6 class="logo-title">Ahmed Ibrahim</h6>
+                  <div class="sub-title sfs">Full Stack Web Developer</div>
+                </div>
+              </a>
               <ul class="socials">
                 <li>
                   <a href="https://github.com/a7med404" target="_blank">
