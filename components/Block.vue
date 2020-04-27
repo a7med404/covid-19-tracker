@@ -1,5 +1,6 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
+// import SelectPicker from '@/components/SelectPicker'
 export default {
   name: 'Block',
   filters: {
@@ -11,7 +12,9 @@ export default {
       }
     }
   },
-
+  components: {
+    // SelectPicker
+  },
   data() {
     return {
       countries: [],
@@ -44,13 +47,15 @@ export default {
   methods: {
     ...mapActions(['fetchCountries', 'setCurrentCountry']),
     changeCountry(event) {
+      console.log(event)
       this.loading = true
-      const selected = event.target.value
+      // const selected = event.target.value
+      const selected = event
       this.selectedCountry = this.countries.filter(
         (c) => c.CountryCode === selected
       )
       setTimeout(() => {
-        if (selected === '') {
+        if (selected === '' || selected === null) {
           this.currentCountry = this.global
           this.setCurrentCountry(this.global)
           this.loading = false
@@ -76,11 +81,31 @@ export default {
           <div class="ui-block-title">
             <div class="h6 title">Check Your Country</div>
             <form class="w-search">
-              <div
-                class="form-group label-floating- is-select my-custom-select"
-              >
+              <div class="form-group label-floating- is-select">
+                <no-ssr>
+                  <v-select
+                    v-model="selectedCountry"
+                    label="Country"
+                    :loading="loading"
+                    :reduce="(Country) => Country.CountryCode"
+                    :options="countries"
+                    placeholder="Global (all world)"
+                    @input="changeCountry($event)"
+                  >
+                    <template #selected-option="{ Country, CountryCode }">
+                      <div style="display: flex; align-items: baseline;">
+                        <strong>{{ Country }}</strong>
+                        <em style="margin-left: .5rem;"> {{ CountryCode }}</em>
+                      </div>
+                    </template>
+                  </v-select>
+                </no-ssr>
                 <!-- <label class="control-label">Check Your Country</label> -->
-                <select class="form-control" @change="changeCountry($event)">
+                <!-- <SelectPicker :countries.sync="countries" /> -->
+                <!-- <select
+                  class="form-control selectpicker"
+                  @change="changeCountry($event)"
+                >
                   <option value="" selected="selected">Global</option>
                   <option
                     v-for="(value, index) in countries"
@@ -89,7 +114,7 @@ export default {
                     v-text="value.Country"
                   >
                   </option>
-                </select>
+                </select> -->
               </div>
             </form>
           </div>
@@ -299,5 +324,23 @@ export default {
 
 .sfs {
   color: #5f52ff;
+}
+
+.vs__selected {
+  color: #777;
+  margin: 4px 5px 0;
+  font-size: 14px;
+}
+.vs__selected em {
+  font-size: 12px;
+}
+.vs__dropdown-toggle {
+  padding: 0px;
+}
+.vs__clear {
+  fill: #08ddc1;
+}
+.vs__open-indicator {
+  fill: #888da8;
 }
 </style>

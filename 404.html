@@ -4,13 +4,16 @@
 <head>
     <title>covid-19</title>
     <meta data-n-head="ssr" charset="utf-8">
-    <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1">
+    <meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1">
+    <meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta data-n-head="ssr" name="viewport" content="user-scalable=no">
+    <meta data-n-head="ssr" name="HandheldFriendly" content="true">
     <meta data-n-head="ssr" data-hid="description" name="description" content="covid-19 tracker app">
-    <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1">
+    <meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1">
     <meta data-n-head="ssr" name="apple-mobile-web-app-capable" content="yes">
     <meta data-n-head="ssr" name="apple-mobile-web-app-status-bar-style" content="default">
     <meta data-n-head="ssr" name="apple-mobile-web-app-title" content="COVID-19">
-    <meta data-n-head="ssr" viewport="width=device-width, initial-scale=1, user-scalable=no" mobileappios="true">
+    <meta data-n-head="ssr" viewport="width=device-width, initial-scale=1, user-scalable=no" mobileAppIOS="true">
     <meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
     <meta data-n-head="ssr" data-hid="author" name="author" content="Ahmed Ibrahim">
     <meta data-n-head="ssr" data-hid="theme-color" name="theme-color" content="#f7f7f7">
@@ -20,83 +23,117 @@
     <meta data-n-head="ssr" data-hid="og:description" name="og:description" property="og:description" content="covid-19 tracker app for information">
     <link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico">
     <link data-n-head="ssr" rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap.css">
-    <link data-n-head="ssr" rel="stylesheet" type="text/css" href="/css/main.min.css">
+    <link data-n-head="ssr" rel="stylesheet" type="text/css" href="/css/main.css">
     <link data-n-head="ssr" rel="apple-touch-startup-image" href="/coronavirus.png">
     <link data-n-head="ssr" rel="manifest" href="/_nuxt/manifest.659238d1.json">
     <link data-n-head="ssr" rel="shortcut icon" href="/_nuxt/icons/icon_64.e54ac8.png">
     <link data-n-head="ssr" rel="apple-touch-icon" href="/_nuxt/icons/icon_512.e54ac8.png" sizes="512x512">
-    <script data-n-head="ssr" src="/js/webfontloader.min.js"></script>
-    <link rel="preload" href="/_nuxt/32c089955f960f996596.js" as="script">
-    <link rel="preload" href="/_nuxt/398fd96584dd834970d3.js" as="script">
-    <link rel="preload" href="/_nuxt/e207a692be8222454a59.js" as="script">
-    <link rel="preload" href="/_nuxt/8ecbd9642bb1c1ca7992.js" as="script">
-    <style data-vue-ssr-id="3191d5ad:0 0dc83c1b:0">
+    <link rel="preload" href="/_nuxt/runtime.js" as="script">
+    <link rel="preload" href="/_nuxt/commons.app.js" as="script">
+    <link rel="preload" href="/_nuxt/vendors.app.js" as="script">
+    <link rel="preload" href="/_nuxt/app.js" as="script">
+    <style data-vue-ssr-id="3191d5ad:0">
         .nuxt-progress {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0px;
+            left: 0px;
+            right: 0px;
             height: 2px;
-            width: 0;
+            width: 0%;
             opacity: 1;
-            transition: width .1s, opacity .4s;
+            transition: width 0.1s, opacity 0.4s;
             background-color: #ff5e3a;
-            z-index: 999999
+            z-index: 999999;
         }
 
         .nuxt-progress.nuxt-progress-notransition {
-            transition: none
+            transition: none;
         }
 
         .nuxt-progress-failed {
-            background-color: red
+            background-color: red;
+        }
+    </style>
+    <style data-vue-ssr-id="0e36c2db:0">
+        .nuxt__build_indicator[data-v-71e9e103] {
+            box-sizing: border-box;
+            position: fixed;
+            font-family: monospace;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+            width: 88px;
+            z-index: 2147483647;
+            font-size: 16px;
+            line-height: 1.2rem;
         }
 
+        .v-enter-active[data-v-71e9e103],
+        .v-leave-active[data-v-71e9e103] {
+            transition-delay: 0.2s;
+            transition-property: all;
+            transition-duration: 0.3s;
+        }
+
+        .v-leave-to[data-v-71e9e103] {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        svg[data-v-71e9e103] {
+            display: inline-block;
+            vertical-align: baseline;
+            width: 1.1em;
+            position: relative;
+            top: 1px;
+        }
+    </style>
+    <style data-vue-ssr-id="0dc83c1b:0">
         .negative {
-            color: #ff5e3a
+            color: #ff5e3a;
         }
 
         .positive {
-            color: #08ddc1
+            color: #08ddc1;
         }
 
         .under-recover {
-            color: #ffd52f
+            color: #ffd52f;
         }
 
-        @media (min-width:531px) {
+        @media (min-width: 531px) {
             .item {
-                min-height: 140px !important
+                min-height: 140px !important;
             }
         }
 
         @-webkit-keyframes spinner {
             0% {
-                transform: translate3d(-50%, -50%, 0) rotate(0)
+                transform: translate3d(-50%, -50%, 0) rotate(0deg);
             }
-            to {
-                transform: translate3d(-50%, -50%, 0) rotate(1turn)
+            100% {
+                transform: translate3d(-50%, -50%, 0) rotate(360deg);
             }
         }
 
         @keyframes spinner {
             0% {
-                transform: translate3d(-50%, -50%, 0) rotate(0)
+                transform: translate3d(-50%, -50%, 0) rotate(0deg);
             }
-            to {
-                transform: translate3d(-50%, -50%, 0) rotate(1turn)
+            100% {
+                transform: translate3d(-50%, -50%, 0) rotate(360deg);
             }
         }
 
-        .spin:before {
-            -webkit-animation: spinner 1.5s linear infinite;
-            animation: spinner 1.5s linear infinite;
+        .spin::before {
+            -webkit-animation: 1.5s linear infinite spinner;
+            animation: 1.5s linear infinite spinner;
             -webkit-animation-play-state: inherit;
             animation-play-state: inherit;
-            border: 5px solid #cfd0d1;
+            border: solid 5px #cfd0d1;
             border-bottom-color: #ff5e3a;
             border-radius: 50%;
-            content: "";
+            content: '';
             height: 40px;
             width: 40px;
             position: absolute;
@@ -104,17 +141,18 @@
             left: 50%;
             transform: translate3d(-50%, -50%, 0);
             will-change: transform;
-            z-index: 1000
+            z-index: 1000;
         }
 
         .sfs {
-            color: #5f52ff
+            color: #5f52ff;
         }
     </style>
 </head>
 
 <body>
     <div data-server-rendered="true" id="__nuxt">
+        <!---->
         <!---->
         <div id="__layout">
             <div>
@@ -158,17 +196,268 @@
                             </div>
                         </div>
                     </section>
-                    <div>
+                    <div data-fetch-key="0">
                         <!---->
                         <div class="row">
                             <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <fieldset class="form-group label-floating is-select"><label class="control-label">Extended Forecast
+                    Days</label> <select class="selectpicker form-control">
+                    <option value="AL">Show Next 7 days</option>
+                    <option value="2">Show Next 10 days</option>
+                    <option value="WY">Show Next 14 days</option>
+                  </select></fieldset>
                                 <div class="ui-block responsive-flex">
                                     <div class="ui-block-title">
-                                        <div class="h6 title">Country</div>
+                                        <div class="h6 title">Check Your Country</div>
                                         <form class="w-search">
-                                            <div class="form-group label-floating is-select"><label class="control-label">Check Your
-                          Country</label> <select class="selectpicker- form-control">
-                          <option value selected>Global</option>
+                                            <div class="form-group label-floating- is-select my-custom-select"><select class="form-control selectpicker">
+                          <option value selected="selected">Global</option>
+                          <option value="AX">ALA Aland Islands</option>
+                          <option value="AF">Afghanistan</option>
+                          <option value="AL">Albania</option>
+                          <option value="DZ">Algeria</option>
+                          <option value="AS">American Samoa</option>
+                          <option value="AD">Andorra</option>
+                          <option value="AO">Angola</option>
+                          <option value="AI">Anguilla</option>
+                          <option value="AQ">Antarctica</option>
+                          <option value="AG">Antigua and Barbuda</option>
+                          <option value="AR">Argentina</option>
+                          <option value="AM">Armenia</option>
+                          <option value="AW">Aruba</option>
+                          <option value="AU">Australia</option>
+                          <option value="AT">Austria</option>
+                          <option value="AZ">Azerbaijan</option>
+                          <option value="BS">Bahamas</option>
+                          <option value="BH">Bahrain</option>
+                          <option value="BD">Bangladesh</option>
+                          <option value="BB">Barbados</option>
+                          <option value="BY">Belarus</option>
+                          <option value="BE">Belgium</option>
+                          <option value="BZ">Belize</option>
+                          <option value="BJ">Benin</option>
+                          <option value="BM">Bermuda</option>
+                          <option value="BT">Bhutan</option>
+                          <option value="BO">Bolivia</option>
+                          <option value="BA">Bosnia and Herzegovina</option>
+                          <option value="BW">Botswana</option>
+                          <option value="BV">Bouvet Island</option>
+                          <option value="BR">Brazil</option>
+                          <option value="IO">British Indian Ocean Territory</option>
+                          <option value="VG">British Virgin Islands</option>
+                          <option value="BN">Brunei Darussalam</option>
+                          <option value="BG">Bulgaria</option>
+                          <option value="BF">Burkina Faso</option>
+                          <option value="BI">Burundi</option>
+                          <option value="KH">Cambodia</option>
+                          <option value="CM">Cameroon</option>
+                          <option value="CA">Canada</option>
+                          <option value="CV">Cape Verde</option>
+                          <option value="KY">Cayman Islands</option>
+                          <option value="CF">Central African Republic</option>
+                          <option value="TD">Chad</option>
+                          <option value="CL">Chile</option>
+                          <option value="CN">China</option>
+                          <option value="CX">Christmas Island</option>
+                          <option value="CC">Cocos (Keeling) Islands</option>
+                          <option value="CO">Colombia</option>
+                          <option value="KM">Comoros</option>
+                          <option value="CG">Congo (Brazzaville)</option>
+                          <option value="CD">Congo (Kinshasa)</option>
+                          <option value="CK">Cook Islands</option>
+                          <option value="CR">Costa Rica</option>
+                          <option value="HR">Croatia</option>
+                          <option value="CU">Cuba</option>
+                          <option value="CY">Cyprus</option>
+                          <option value="CZ">Czech Republic</option>
+                          <option value="CI">Côte d'Ivoire</option>
+                          <option value="DK">Denmark</option>
+                          <option value="DJ">Djibouti</option>
+                          <option value="DM">Dominica</option>
+                          <option value="DO">Dominican Republic</option>
+                          <option value="EC">Ecuador</option>
+                          <option value="EG">Egypt</option>
+                          <option value="SV">El Salvador</option>
+                          <option value="GQ">Equatorial Guinea</option>
+                          <option value="ER">Eritrea</option>
+                          <option value="EE">Estonia</option>
+                          <option value="ET">Ethiopia</option>
+                          <option value="FK">Falkland Islands (Malvinas)</option>
+                          <option value="FO">Faroe Islands</option>
+                          <option value="FJ">Fiji</option>
+                          <option value="FI">Finland</option>
+                          <option value="FR">France</option>
+                          <option value="GF">French Guiana</option>
+                          <option value="PF">French Polynesia</option>
+                          <option value="TF">French Southern Territories</option>
+                          <option value="GA">Gabon</option>
+                          <option value="GM">Gambia</option>
+                          <option value="GE">Georgia</option>
+                          <option value="DE">Germany</option>
+                          <option value="GH">Ghana</option>
+                          <option value="GI">Gibraltar</option>
+                          <option value="GR">Greece</option>
+                          <option value="GL">Greenland</option>
+                          <option value="GD">Grenada</option>
+                          <option value="GP">Guadeloupe</option>
+                          <option value="GU">Guam</option>
+                          <option value="GT">Guatemala</option>
+                          <option value="GG">Guernsey</option>
+                          <option value="GN">Guinea</option>
+                          <option value="GW">Guinea-Bissau</option>
+                          <option value="GY">Guyana</option>
+                          <option value="HT">Haiti</option>
+                          <option value="HM">Heard and Mcdonald Islands</option>
+                          <option value="VA">Holy See (Vatican City State)</option>
+                          <option value="HN">Honduras</option>
+                          <option value="HK">Hong Kong, SAR China</option>
+                          <option value="HU">Hungary</option>
+                          <option value="IS">Iceland</option>
+                          <option value="IN">India</option>
+                          <option value="ID">Indonesia</option>
+                          <option value="IR">Iran, Islamic Republic of</option>
+                          <option value="IQ">Iraq</option>
+                          <option value="IE">Ireland</option>
+                          <option value="IM">Isle of Man</option>
+                          <option value="IL">Israel</option>
+                          <option value="IT">Italy</option>
+                          <option value="JM">Jamaica</option>
+                          <option value="JP">Japan</option>
+                          <option value="JE">Jersey</option>
+                          <option value="JO">Jordan</option>
+                          <option value="KZ">Kazakhstan</option>
+                          <option value="KE">Kenya</option>
+                          <option value="KI">Kiribati</option>
+                          <option value="KP">Korea (North)</option>
+                          <option value="KR">Korea (South)</option>
+                          <option value="KW">Kuwait</option>
+                          <option value="KG">Kyrgyzstan</option>
+                          <option value="LA">Lao PDR</option>
+                          <option value="LV">Latvia</option>
+                          <option value="LB">Lebanon</option>
+                          <option value="LS">Lesotho</option>
+                          <option value="LR">Liberia</option>
+                          <option value="LY">Libya</option>
+                          <option value="LI">Liechtenstein</option>
+                          <option value="LT">Lithuania</option>
+                          <option value="LU">Luxembourg</option>
+                          <option value="MO">Macao, SAR China</option>
+                          <option value="MK">Macedonia, Republic of</option>
+                          <option value="MG">Madagascar</option>
+                          <option value="MW">Malawi</option>
+                          <option value="MY">Malaysia</option>
+                          <option value="MV">Maldives</option>
+                          <option value="ML">Mali</option>
+                          <option value="MT">Malta</option>
+                          <option value="MH">Marshall Islands</option>
+                          <option value="MQ">Martinique</option>
+                          <option value="MR">Mauritania</option>
+                          <option value="MU">Mauritius</option>
+                          <option value="YT">Mayotte</option>
+                          <option value="MX">Mexico</option>
+                          <option value="FM">Micronesia, Federated States of</option>
+                          <option value="MD">Moldova</option>
+                          <option value="MC">Monaco</option>
+                          <option value="MN">Mongolia</option>
+                          <option value="ME">Montenegro</option>
+                          <option value="MS">Montserrat</option>
+                          <option value="MA">Morocco</option>
+                          <option value="MZ">Mozambique</option>
+                          <option value="MM">Myanmar</option>
+                          <option value="NA">Namibia</option>
+                          <option value="NR">Nauru</option>
+                          <option value="NP">Nepal</option>
+                          <option value="NL">Netherlands</option>
+                          <option value="AN">Netherlands Antilles</option>
+                          <option value="NC">New Caledonia</option>
+                          <option value="NI">Nicaragua</option>
+                          <option value="NE">Niger</option>
+                          <option value="NG">Nigeria</option>
+                          <option value="NU">Niue</option>
+                          <option value="NF">Norfolk Island</option>
+                          <option value="MP">Northern Mariana Islands</option>
+                          <option value="NO">Norway</option>
+                          <option value="OM">Oman</option>
+                          <option value="PK">Pakistan</option>
+                          <option value="PW">Palau</option>
+                          <option value="PA">Panama</option>
+                          <option value="PG">Papua New Guinea</option>
+                          <option value="PY">Paraguay</option>
+                          <option value="PE">Peru</option>
+                          <option value="PH">Philippines</option>
+                          <option value="PN">Pitcairn</option>
+                          <option value="PL">Poland</option>
+                          <option value="PT">Portugal</option>
+                          <option value="PR">Puerto Rico</option>
+                          <option value="QA">Qatar</option>
+                          <option value="XK">Republic of Kosovo</option>
+                          <option value="RO">Romania</option>
+                          <option value="RU">Russian Federation</option>
+                          <option value="RW">Rwanda</option>
+                          <option value="RE">Réunion</option>
+                          <option value="SH">Saint Helena</option>
+                          <option value="KN">Saint Kitts and Nevis</option>
+                          <option value="LC">Saint Lucia</option>
+                          <option value="PM">Saint Pierre and Miquelon</option>
+                          <option value="VC">Saint Vincent and Grenadines</option>
+                          <option value="BL">Saint-Barthélemy</option>
+                          <option value="MF">Saint-Martin (French part)</option>
+                          <option value="WS">Samoa</option>
+                          <option value="SM">San Marino</option>
+                          <option value="ST">Sao Tome and Principe</option>
+                          <option value="SA">Saudi Arabia</option>
+                          <option value="SN">Senegal</option>
+                          <option value="RS">Serbia</option>
+                          <option value="SC">Seychelles</option>
+                          <option value="SL">Sierra Leone</option>
+                          <option value="SG">Singapore</option>
+                          <option value="SK">Slovakia</option>
+                          <option value="SI">Slovenia</option>
+                          <option value="SB">Solomon Islands</option>
+                          <option value="SO">Somalia</option>
+                          <option value="ZA">South Africa</option>
+                          <option value="GS">South Georgia and the South Sandwich Islands</option>
+                          <option value="SS">South Sudan</option>
+                          <option value="ES">Spain</option>
+                          <option value="LK">Sri Lanka</option>
+                          <option value="SD">Sudan</option>
+                          <option value="SR">Suriname</option>
+                          <option value="SJ">Svalbard and Jan Mayen Islands</option>
+                          <option value="SZ">Swaziland</option>
+                          <option value="SE">Sweden</option>
+                          <option value="CH">Switzerland</option>
+                          <option value="SY">Syrian Arab Republic (Syria)</option>
+                          <option value="TW">Taiwan, Republic of China</option>
+                          <option value="TJ">Tajikistan</option>
+                          <option value="TZ">Tanzania, United Republic of</option>
+                          <option value="TH">Thailand</option>
+                          <option value="TL">Timor-Leste</option>
+                          <option value="TG">Togo</option>
+                          <option value="TK">Tokelau</option>
+                          <option value="TO">Tonga</option>
+                          <option value="TT">Trinidad and Tobago</option>
+                          <option value="TN">Tunisia</option>
+                          <option value="TR">Turkey</option>
+                          <option value="TM">Turkmenistan</option>
+                          <option value="TC">Turks and Caicos Islands</option>
+                          <option value="TV">Tuvalu</option>
+                          <option value="UM">US Minor Outlying Islands</option>
+                          <option value="UG">Uganda</option>
+                          <option value="UA">Ukraine</option>
+                          <option value="AE">United Arab Emirates</option>
+                          <option value="GB">United Kingdom</option>
+                          <option value="US">United States of America</option>
+                          <option value="UY">Uruguay</option>
+                          <option value="UZ">Uzbekistan</option>
+                          <option value="VU">Vanuatu</option>
+                          <option value="VE">Venezuela (Bolivarian Republic)</option>
+                          <option value="VN">Viet Nam</option>
+                          <option value="VI">Virgin Islands, US</option>
+                          <option value="WF">Wallis and Futuna Islands</option>
+                          <option value="EH">Western Sahara</option>
+                          <option value="YE">Yemen</option>
+                          <option value="ZM">Zambia</option>
+                          <option value="ZW">Zimbabwe</option>
                         </select></div>
                                         </form>
                                     </div>
@@ -185,14 +474,14 @@
                             Total Infected
                           </span> <span class="glyphicon glyphicon-plus"></span></div>
                                                 <div class="count-stat">
-
+                                                    2967831
                                                     <span class="indicator negative">
-                            + </span></div>
+                            + 74720</span></div>
                                                 <div class="sub-title"><span class="negative"><i aria-hidden="true" class="fa fa-arrow-up"></i>
-
+                            74720
                           </span> New cases.
                                                     <span class="negative"><i aria-hidden="true" class="fa fa-arrow-up"></i>
-                            0%
+                            3.00 %
                           </span> Increased.
                                                 </div>
                                             </li>
@@ -208,14 +497,14 @@
                                                 <div class="points"><span> Total <span class="negative">Deaths</span></span>
                                                 </div>
                                                 <div class="count-stat">
-
+                                                    206472
                                                     <span class="indicator negative">
-                            + </span></div>
+                            + 3695</span></div>
                                                 <div class="sub-title"><span class="negative"><i aria-hidden="true" class="fa fa-arrow-up"></i>
-
+                            3695
                           </span> New cases.
                                                     <span class="negative"><i aria-hidden="true" class="fa fa-arrow-up"></i>
-                            0%
+                            2.00 %
                           </span> Increased.
                                                 </div>
                                             </li>
@@ -232,14 +521,14 @@
                             Total Recovered
                           </span></div>
                                                 <div class="count-stat">
-
+                                                    863825
                                                     <span class="indicator positive">
-                            + </span></div>
+                            + 49019</span></div>
                                                 <div class="sub-title"><span class="positive"><i aria-hidden="true" class="fa fa-arrow-up"></i>
-
+                            49019
                           </span> New recovered .
                                                     <span class="positive"><i aria-hidden="true" class="fa fa-arrow-up"></i>
-                            0%
+                            6.00 %
                           </span> Increased.
                                                 </div>
                                             </li>
@@ -254,15 +543,15 @@
                                             <li>
                                                 <div class="points"><span> Under Recover </span></div>
                                                 <div class="count-stat">
-
+                                                    1897534
                                                     <span class="indicator under-recover">
-                            + </span></div>
+                            + 74720</span></div>
                                                 <div class="sub-title"><span class="under-recover"><i aria-hidden="true"
                               class="fa fa-arrow-up"></i>
-
+                            74720
                           </span> New cases.
                                                     <span class="under-recover"><i aria-hidden="true" class="fa fa-arrow-up"></i>
-                            0%
+                            3.00 %
                           </span> Increased.
                                                 </div>
                                             </li>
@@ -375,6 +664,13 @@
                                         <p>
                                             The latest news and updates on the COVID-19 outbreak.
                                             <br> Developed By <span class="c-primary"> Ahmed Ibrahim.</span></p>
+                                        <a href="#" class="logo profile">
+                                            <div class="img-wrap"><img src="/profile.jpg" alt="Olympus"></div>
+                                            <div class="title-block">
+                                                <h6 class="logo-title">Ahmed Ibrahim</h6>
+                                                <div class="sub-title sfs">Full Stack Web Developer</div>
+                                            </div>
+                                        </a>
                                         <ul class="socials">
                                             <li><a href="https://github.com/a7med404" target="_blank"><i aria-hidden="true"
                             class="fab fa-github"></i></a></li>
@@ -400,23 +696,3002 @@
         </div>
     </div>
     <script>
-        window.__NUXT__ = {
-            appName: "COVID-19 Tracker",
-            tech: ["NuxtJS", "PWA", "VueJS", "NodeJS", "TypeScript"],
-            Developer: {
-                name: "Ahmed Ibrahim",
-                job: "Full Stack Web Derveloper",
+        window.__NUXT__ = (function(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C,
+            D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, _, $, aa, ab, ac, ad, ae, af, ag, ah, ai,
+            aj, ak, al, am, an, ao, ap, aq, ar, as, at, au, av, aw, ax, ay, az, aA, aB, aC, aD, aE, aF, aG, aH, aI, aJ,
+            aK, aL, aM, aN, aO, aP, aQ, aR, aS, aT, aU) {
+            _.NewConfirmed = 74720;
+            _.TotalConfirmed = 2967831;
+            _.NewDeaths = 3695;
+            _.TotalDeaths = 206472;
+            _.NewRecovered = 49019;
+            _.TotalRecovered = 863825;
+            $[0] = {
+                Country: "ALA Aland Islands",
+                CountryCode: "AX",
+                Slug: "ala-aland-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[1] = {
+                Country: "Afghanistan",
+                CountryCode: "AF",
+                Slug: "afghanistan",
+                NewConfirmed: 68,
+                TotalConfirmed: 1531,
+                NewDeaths: e,
+                TotalDeaths: D,
+                NewRecovered: r,
+                TotalRecovered: 207,
+                Date: b
+            };
+            $[2] = {
+                Country: "Albania",
+                CountryCode: "AL",
+                Slug: "albania",
+                NewConfirmed: p,
+                TotalConfirmed: 726,
+                NewDeaths: c,
+                TotalDeaths: q,
+                NewRecovered: h,
+                TotalRecovered: 410,
+                Date: b
+            };
+            $[3] = {
+                Country: "Algeria",
+                CountryCode: "DZ",
+                Slug: "algeria",
+                NewConfirmed: aa,
+                TotalConfirmed: 3382,
+                NewDeaths: i,
+                TotalDeaths: 425,
+                NewRecovered: E,
+                TotalRecovered: 1508,
+                Date: b
+            };
+            $[4] = {
+                Country: "American Samoa",
+                CountryCode: "AS",
+                Slug: "american-samoa",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[5] = {
+                Country: "Andorra",
+                CountryCode: "AD",
+                Slug: "andorra",
+                NewConfirmed: a,
+                TotalConfirmed: 738,
+                NewDeaths: a,
+                TotalDeaths: ab,
+                NewRecovered: a,
+                TotalRecovered: ac,
+                Date: b
+            };
+            $[6] = {
+                Country: "Angola",
+                CountryCode: "AO",
+                Slug: "angola",
+                NewConfirmed: c,
+                TotalConfirmed: F,
+                NewDeaths: a,
+                TotalDeaths: d,
+                NewRecovered: a,
+                TotalRecovered: i,
+                Date: b
+            };
+            $[7] = {
+                Country: "Anguilla",
+                CountryCode: "AI",
+                Slug: "anguilla",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[8] = {
+                Country: "Antarctica",
+                CountryCode: "AQ",
+                Slug: "antarctica",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[9] = {
+                Country: "Antigua and Barbuda",
+                CountryCode: "AG",
+                Slug: "antigua-and-barbuda",
+                NewConfirmed: a,
+                TotalConfirmed: s,
+                NewDeaths: a,
+                TotalDeaths: e,
+                NewRecovered: a,
+                TotalRecovered: m,
+                Date: b
+            };
+            $[10] = {
+                Country: "Argentina",
+                CountryCode: "AR",
+                Slug: "argentina",
+                NewConfirmed: ad,
+                TotalConfirmed: 3892,
+                NewDeaths: h,
+                TotalDeaths: 192,
+                NewRecovered: ae,
+                TotalRecovered: af,
+                Date: b
+            };
+            $[11] = {
+                Country: "Armenia",
+                CountryCode: "AM",
+                Slug: "armenia",
+                NewConfirmed: ag,
+                TotalConfirmed: 1746,
+                NewDeaths: a,
+                TotalDeaths: q,
+                NewRecovered: y,
+                TotalRecovered: 833,
+                Date: b
+            };
+            $[12] = {
+                Country: "Aruba",
+                CountryCode: "AW",
+                Slug: "aruba",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[13] = {
+                Country: "Australia",
+                CountryCode: "AU",
+                Slug: "australia",
+                NewConfirmed: G,
+                TotalConfirmed: 6714,
+                NewDeaths: e,
+                TotalDeaths: H,
+                NewRecovered: 1318,
+                TotalRecovered: 5541,
+                Date: b
+            };
+            $[14] = {
+                Country: "Austria",
+                CountryCode: "AT",
+                Slug: "austria",
+                NewConfirmed: ae,
+                TotalConfirmed: 15225,
+                NewDeaths: i,
+                TotalDeaths: 542,
+                NewRecovered: 179,
+                TotalRecovered: 12282,
+                Date: b
+            };
+            $[15] = {
+                Country: "Azerbaijan",
+                CountryCode: "AZ",
+                Slug: "azerbaijan",
+                NewConfirmed: q,
+                TotalConfirmed: 1645,
+                NewDeaths: a,
+                TotalDeaths: z,
+                NewRecovered: u,
+                TotalRecovered: 1139,
+                Date: b
+            };
+            $[16] = {
+                Country: "Bahamas",
+                CountryCode: "BS",
+                Slug: "bahamas",
+                NewConfirmed: d,
+                TotalConfirmed: ah,
+                NewDeaths: a,
+                TotalDeaths: m,
+                NewRecovered: h,
+                TotalRecovered: I,
+                Date: b
+            };
+            $[17] = {
+                Country: "Bahrain",
+                CountryCode: "BH",
+                Slug: "bahrain",
+                NewConfirmed: u,
+                TotalConfirmed: 2647,
+                NewDeaths: a,
+                TotalDeaths: g,
+                NewRecovered: E,
+                TotalRecovered: 1189,
+                Date: b
+            };
+            $[18] = {
+                Country: "Bangladesh",
+                CountryCode: "BD",
+                Slug: "bangladesh",
+                NewConfirmed: 418,
+                TotalConfirmed: 5416,
+                NewDeaths: k,
+                TotalDeaths: J,
+                NewRecovered: o,
+                TotalRecovered: K,
+                Date: b
+            };
+            $[19] = {
+                Country: "Barbados",
+                CountryCode: "BB",
+                Slug: "barbados",
+                NewConfirmed: a,
+                TotalConfirmed: ai,
+                NewDeaths: a,
+                TotalDeaths: i,
+                NewRecovered: g,
+                TotalRecovered: L,
+                Date: b
+            };
+            $[20] = {
+                Country: "Belarus",
+                CountryCode: "BY",
+                Slug: "belarus",
+                NewConfirmed: 873,
+                TotalConfirmed: 10463,
+                NewDeaths: k,
+                TotalDeaths: 72,
+                NewRecovered: K,
+                TotalRecovered: 1695,
+                Date: b
+            };
+            $[21] = {
+                Country: "Belgium",
+                CountryCode: "BE",
+                Slug: "belgium",
+                NewConfirmed: 809,
+                TotalConfirmed: 46134,
+                NewDeaths: 177,
+                TotalDeaths: 7094,
+                NewRecovered: 368,
+                TotalRecovered: 10785,
+                Date: b
+            };
+            $[22] = {
+                Country: "Belize",
+                CountryCode: "BZ",
+                Slug: "belize",
+                NewConfirmed: a,
+                TotalConfirmed: t,
+                NewDeaths: a,
+                TotalDeaths: d,
+                NewRecovered: a,
+                TotalRecovered: k,
+                Date: b
+            };
+            $[23] = {
+                Country: "Benin",
+                CountryCode: "BJ",
+                Slug: "benin",
+                NewConfirmed: j,
+                TotalConfirmed: M,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: i,
+                TotalRecovered: aj,
+                Date: b
+            };
+            $[24] = {
+                Country: "Bermuda",
+                CountryCode: "BM",
+                Slug: "bermuda",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[25] = {
+                Country: "Bhutan",
+                CountryCode: "BT",
+                Slug: "bhutan",
+                NewConfirmed: a,
+                TotalConfirmed: h,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: c,
+                TotalRecovered: f,
+                Date: b
+            };
+            $[26] = {
+                Country: "Bolivia",
+                CountryCode: "BO",
+                Slug: "bolivia",
+                NewConfirmed: 84,
+                TotalConfirmed: 950,
+                NewDeaths: f,
+                TotalDeaths: D,
+                NewRecovered: F,
+                TotalRecovered: ah,
+                Date: b
+            };
+            $[27] = {
+                Country: "Bosnia and Herzegovina",
+                CountryCode: "BA",
+                Slug: "bosnia-and-herzegovina",
+                NewConfirmed: y,
+                TotalConfirmed: 1516,
+                NewDeaths: d,
+                TotalDeaths: u,
+                NewRecovered: N,
+                TotalRecovered: 624,
+                Date: b
+            };
+            $[28] = {
+                Country: "Botswana",
+                CountryCode: "BW",
+                Slug: "botswana",
+                NewConfirmed: a,
+                TotalConfirmed: I,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[29] = {
+                Country: "Bouvet Island",
+                CountryCode: "BV",
+                Slug: "bouvet-island",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[30] = {
+                Country: "Brazil",
+                CountryCode: "BR",
+                Slug: "brazil",
+                NewConfirmed: 3776,
+                TotalConfirmed: 63100,
+                NewDeaths: 229,
+                TotalDeaths: 4286,
+                NewRecovered: 992,
+                TotalRecovered: 30152,
+                Date: b
+            };
+            $[31] = {
+                Country: "British Indian Ocean Territory",
+                CountryCode: "IO",
+                Slug: "british-indian-ocean-territory",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[32] = {
+                Country: "British Virgin Islands",
+                CountryCode: "VG",
+                Slug: "british-virgin-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[33] = {
+                Country: "Brunei Darussalam",
+                CountryCode: "BN",
+                Slug: "brunei",
+                NewConfirmed: a,
+                TotalConfirmed: 138,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: d,
+                TotalRecovered: ak,
+                Date: b
+            };
+            $[34] = {
+                Country: "Bulgaria",
+                CountryCode: "BG",
+                Slug: "bulgaria",
+                NewConfirmed: al,
+                TotalConfirmed: 1300,
+                NewDeaths: c,
+                TotalDeaths: A,
+                NewRecovered: g,
+                TotalRecovered: 205,
+                Date: b
+            };
+            $[35] = {
+                Country: "Burkina Faso",
+                CountryCode: "BF",
+                Slug: "burkina-faso",
+                NewConfirmed: e,
+                TotalConfirmed: 632,
+                NewDeaths: c,
+                TotalDeaths: O,
+                NewRecovered: m,
+                TotalRecovered: 453,
+                Date: b
+            };
+            $[36] = {
+                Country: "Burundi",
+                CountryCode: "BI",
+                Slug: "burundi",
+                NewConfirmed: a,
+                TotalConfirmed: m,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: a,
+                TotalRecovered: f,
+                Date: b
+            };
+            $[37] = {
+                Country: "Cambodia",
+                CountryCode: "KH",
+                Slug: "cambodia",
+                NewConfirmed: a,
+                TotalConfirmed: K,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: am,
+                Date: b
+            };
+            $[38] = {
+                Country: "Cameroon",
+                CountryCode: "CM",
+                Slug: "cameroon",
+                NewConfirmed: 103,
+                TotalConfirmed: 1621,
+                NewDeaths: e,
+                TotalDeaths: A,
+                NewRecovered: 89,
+                TotalRecovered: 786,
+                Date: b
+            };
+            $[39] = {
+                Country: "Canada",
+                CountryCode: "CA",
+                Slug: "canada",
+                NewConfirmed: 1654,
+                TotalConfirmed: 47145,
+                NewDeaths: 114,
+                TotalDeaths: 2660,
+                NewRecovered: an,
+                TotalRecovered: 16883,
+                Date: b
+            };
+            $[40] = {
+                Country: "Cape Verde",
+                CountryCode: "CV",
+                Slug: "cape-verde",
+                NewConfirmed: v,
+                TotalConfirmed: ao,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: a,
+                TotalRecovered: c,
+                Date: b
+            };
+            $[41] = {
+                Country: "Cayman Islands",
+                CountryCode: "KY",
+                Slug: "cayman-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[42] = {
+                Country: "Central African Republic",
+                CountryCode: "CF",
+                Slug: "central-african-republic",
+                NewConfirmed: e,
+                TotalConfirmed: r,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: j,
+                Date: b
+            };
+            $[43] = {
+                Country: "Chad",
+                CountryCode: "TD",
+                Slug: "chad",
+                NewConfirmed: a,
+                TotalConfirmed: B,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: n,
+                Date: b
+            };
+            $[44] = {
+                Country: "Chile",
+                CountryCode: "CL",
+                Slug: "chile",
+                NewConfirmed: 473,
+                TotalConfirmed: 13331,
+                NewDeaths: g,
+                TotalDeaths: 189,
+                NewRecovered: ap,
+                TotalRecovered: 7024,
+                Date: b
+            };
+            $[45] = {
+                Country: "China",
+                CountryCode: "CN",
+                Slug: "china",
+                NewConfirmed: e,
+                TotalConfirmed: 83912,
+                NewDeaths: c,
+                TotalDeaths: 4637,
+                NewRecovered: 102,
+                TotalRecovered: 78277,
+                Date: b
+            };
+            $[46] = {
+                Country: "Christmas Island",
+                CountryCode: "CX",
+                Slug: "christmas-island",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[47] = {
+                Country: "Cocos (Keeling) Islands",
+                CountryCode: "CC",
+                Slug: "cocos-keeling-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[48] = {
+                Country: "Colombia",
+                CountryCode: "CO",
+                Slug: "colombia",
+                NewConfirmed: aq,
+                TotalConfirmed: 5379,
+                NewDeaths: m,
+                TotalDeaths: 244,
+                NewRecovered: ar,
+                TotalRecovered: 1133,
+                Date: b
+            };
+            $[49] = {
+                Country: "Comoros",
+                CountryCode: "KM",
+                Slug: "comoros",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[50] = {
+                Country: "Congo (Brazzaville)",
+                CountryCode: "CG",
+                Slug: "congo-brazzaville",
+                NewConfirmed: a,
+                TotalConfirmed: 200,
+                NewDeaths: a,
+                TotalDeaths: i,
+                NewRecovered: a,
+                TotalRecovered: r,
+                Date: b
+            };
+            $[51] = {
+                Country: "Congo (Kinshasa)",
+                CountryCode: "CD",
+                Slug: "congo-kinshasa",
+                NewConfirmed: F,
+                TotalConfirmed: 442,
+                NewDeaths: a,
+                TotalDeaths: q,
+                NewRecovered: c,
+                TotalRecovered: D,
+                Date: b
+            };
+            $[52] = {
+                Country: "Cook Islands",
+                CountryCode: "CK",
+                Slug: "cook-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[53] = {
+                Country: "Costa Rica",
+                CountryCode: "CR",
+                Slug: "costa-rica",
+                NewConfirmed: d,
+                TotalConfirmed: 695,
+                NewDeaths: a,
+                TotalDeaths: i,
+                NewRecovered: I,
+                TotalRecovered: 264,
+                Date: b
+            };
+            $[54] = {
+                Country: "Croatia",
+                CountryCode: "HR",
+                Slug: "croatia",
+                NewConfirmed: p,
+                TotalConfirmed: 2030,
+                NewDeaths: c,
+                TotalDeaths: as,
+                NewRecovered: ag,
+                TotalRecovered: 1103,
+                Date: b
+            };
+            $[55] = {
+                Country: "Cuba",
+                CountryCode: "CU",
+                Slug: "cuba",
+                NewConfirmed: N,
+                TotalConfirmed: 1369,
+                NewDeaths: e,
+                TotalDeaths: at,
+                NewRecovered: M,
+                TotalRecovered: au,
+                Date: b
+            };
+            $[56] = {
+                Country: "Cyprus",
+                CountryCode: "CY",
+                Slug: "cyprus",
+                NewConfirmed: h,
+                TotalConfirmed: 817,
+                NewDeaths: a,
+                TotalDeaths: p,
+                NewRecovered: a,
+                TotalRecovered: 148,
+                Date: b
+            };
+            $[57] = {
+                Country: "Czech Republic",
+                CountryCode: "CZ",
+                Slug: "czech-republic",
+                NewConfirmed: P,
+                TotalConfirmed: 7404,
+                NewDeaths: d,
+                TotalDeaths: 220,
+                NewRecovered: av,
+                TotalRecovered: 2545,
+                Date: b
+            };
+            $[58] = {
+                Country: "Côte d'Ivoire",
+                CountryCode: "CI",
+                Slug: "cote-divoire",
+                NewConfirmed: 73,
+                TotalConfirmed: 1150,
+                NewDeaths: a,
+                TotalDeaths: p,
+                NewRecovered: Q,
+                TotalRecovered: 468,
+                Date: b
+            };
+            $[59] = {
+                Country: "Denmark",
+                CountryCode: "DK",
+                Slug: "denmark",
+                NewConfirmed: 130,
+                TotalConfirmed: 8773,
+                NewDeaths: f,
+                TotalDeaths: 422,
+                NewRecovered: 136,
+                TotalRecovered: 5994,
+                Date: b
+            };
+            $[60] = {
+                Country: "Djibouti",
+                CountryCode: "DJ",
+                Slug: "djibouti",
+                NewConfirmed: n,
+                TotalConfirmed: 1023,
+                NewDeaths: a,
+                TotalDeaths: d,
+                NewRecovered: w,
+                TotalRecovered: 411,
+                Date: b
+            };
+            $[61] = {
+                Country: "Dominica",
+                CountryCode: "DM",
+                Slug: "dominica",
+                NewConfirmed: a,
+                TotalConfirmed: v,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: R,
+                Date: b
+            };
+            $[62] = {
+                Country: "Dominican Republic",
+                CountryCode: "DO",
+                Slug: "dominican-republic",
+                NewConfirmed: aw,
+                TotalConfirmed: 6135,
+                NewDeaths: k,
+                TotalDeaths: ap,
+                NewRecovered: S,
+                TotalRecovered: 910,
+                Date: b
+            };
+            $[63] = {
+                Country: "Ecuador",
+                CountryCode: "EC",
+                Slug: "ecuador",
+                NewConfirmed: a,
+                TotalConfirmed: 22719,
+                NewDeaths: a,
+                TotalDeaths: ax,
+                NewRecovered: a,
+                TotalRecovered: 1366,
+                Date: b
+            };
+            $[64] = {
+                Country: "Egypt",
+                CountryCode: "EG",
+                Slug: "egypt",
+                NewConfirmed: 215,
+                TotalConfirmed: 4534,
+                NewDeaths: j,
+                TotalDeaths: 317,
+                NewRecovered: ay,
+                TotalRecovered: 1176,
+                Date: b
+            };
+            $[65] = {
+                Country: "El Salvador",
+                CountryCode: "SV",
+                Slug: "el-salvador",
+                NewConfirmed: s,
+                TotalConfirmed: 298,
+                NewDeaths: a,
+                TotalDeaths: g,
+                NewRecovered: g,
+                TotalRecovered: H,
+                Date: b
+            };
+            $[66] = {
+                Country: "Equatorial Guinea",
+                CountryCode: "GQ",
+                Slug: "equatorial-guinea",
+                NewConfirmed: a,
+                TotalConfirmed: 258,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: c,
+                TotalRecovered: g,
+                Date: b
+            };
+            $[67] = {
+                Country: "Eritrea",
+                CountryCode: "ER",
+                Slug: "eritrea",
+                NewConfirmed: a,
+                TotalConfirmed: L,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: R,
+                Date: b
+            };
+            $[68] = {
+                Country: "Estonia",
+                CountryCode: "EE",
+                Slug: "estonia",
+                NewConfirmed: g,
+                TotalConfirmed: 1643,
+                NewDeaths: e,
+                TotalDeaths: Q,
+                NewRecovered: k,
+                TotalRecovered: 233,
+                Date: b
+            };
+            $[69] = {
+                Country: "Ethiopia",
+                CountryCode: "ET",
+                Slug: "ethiopia",
+                NewConfirmed: c,
+                TotalConfirmed: ak,
+                NewDeaths: a,
+                TotalDeaths: e,
+                NewRecovered: l,
+                TotalRecovered: T,
+                Date: b
+            };
+            $[70] = {
+                Country: "Falkland Islands (Malvinas)",
+                CountryCode: "FK",
+                Slug: "falkland-islands-malvinas",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[71] = {
+                Country: "Faroe Islands",
+                CountryCode: "FO",
+                Slug: "faroe-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[72] = {
+                Country: "Fiji",
+                CountryCode: "FJ",
+                Slug: "fiji",
+                NewConfirmed: a,
+                TotalConfirmed: t,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: d,
+                TotalRecovered: l,
+                Date: b
+            };
+            $[73] = {
+                Country: "Finland",
+                CountryCode: "FI",
+                Slug: "finland",
+                NewConfirmed: 101,
+                TotalConfirmed: 4576,
+                NewDeaths: f,
+                TotalDeaths: 190,
+                NewRecovered: a,
+                TotalRecovered: az,
+                Date: b
+            };
+            $[74] = {
+                Country: "France",
+                CountryCode: "FR",
+                Slug: "france",
+                NewConfirmed: ax,
+                TotalConfirmed: 162220,
+                NewDeaths: 242,
+                TotalDeaths: 22890,
+                NewRecovered: 309,
+                TotalRecovered: 45681,
+                Date: b
+            };
+            $[75] = {
+                Country: "French Guiana",
+                CountryCode: "GF",
+                Slug: "french-guiana",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[76] = {
+                Country: "French Polynesia",
+                CountryCode: "PF",
+                Slug: "french-polynesia",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[77] = {
+                Country: "French Southern Territories",
+                CountryCode: "TF",
+                Slug: "french-southern-territories",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[78] = {
+                Country: "Gabon",
+                CountryCode: "GA",
+                Slug: "gabon",
+                NewConfirmed: a,
+                TotalConfirmed: 176,
+                NewDeaths: a,
+                TotalDeaths: e,
+                NewRecovered: a,
+                TotalRecovered: y,
+                Date: b
+            };
+            $[79] = {
+                Country: "Gambia",
+                CountryCode: "GM",
+                Slug: "gambia",
+                NewConfirmed: a,
+                TotalConfirmed: j,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: a,
+                TotalRecovered: g,
+                Date: b
+            };
+            $[80] = {
+                Country: "Georgia",
+                CountryCode: "GE",
+                Slug: "georgia",
+                NewConfirmed: y,
+                TotalConfirmed: 486,
+                NewDeaths: c,
+                TotalDeaths: i,
+                NewRecovered: j,
+                TotalRecovered: 149,
+                Date: b
+            };
+            $[81] = {
+                Country: "Germany",
+                CountryCode: "DE",
+                Slug: "germany",
+                NewConfirmed: 1257,
+                TotalConfirmed: 157770,
+                NewDeaths: aA,
+                TotalDeaths: 5976,
+                NewRecovered: 2200,
+                TotalRecovered: 112000,
+                Date: b
+            };
+            $[82] = {
+                Country: "Ghana",
+                CountryCode: "GH",
+                Slug: "ghana",
+                NewConfirmed: 271,
+                TotalConfirmed: 1550,
+                NewDeaths: c,
+                TotalDeaths: m,
+                NewRecovered: z,
+                TotalRecovered: 155,
+                Date: b
+            };
+            $[83] = {
+                Country: "Gibraltar",
+                CountryCode: "GI",
+                Slug: "gibraltar",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[84] = {
+                Country: "Greece",
+                CountryCode: "GR",
+                Slug: "greece",
+                NewConfirmed: m,
+                TotalConfirmed: 2517,
+                NewDeaths: f,
+                TotalDeaths: 134,
+                NewRecovered: a,
+                TotalRecovered: 577,
+                Date: b
+            };
+            $[85] = {
+                Country: "Greenland",
+                CountryCode: "GL",
+                Slug: "greenland",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[86] = {
+                Country: "Grenada",
+                CountryCode: "GD",
+                Slug: "grenada",
+                NewConfirmed: a,
+                TotalConfirmed: t,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: h,
+                Date: b
+            };
+            $[87] = {
+                Country: "Guadeloupe",
+                CountryCode: "GP",
+                Slug: "guadeloupe",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[88] = {
+                Country: "Guam",
+                CountryCode: "GU",
+                Slug: "guam",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[89] = {
+                Country: "Guatemala",
+                CountryCode: "GT",
+                Slug: "guatemala",
+                NewConfirmed: aB,
+                TotalConfirmed: U,
+                NewDeaths: d,
+                TotalDeaths: n,
+                NewRecovered: f,
+                TotalRecovered: Q,
+                Date: b
+            };
+            $[90] = {
+                Country: "Guernsey",
+                CountryCode: "GG",
+                Slug: "guernsey",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[91] = {
+                Country: "Guinea",
+                CountryCode: "GN",
+                Slug: "guinea",
+                NewConfirmed: a,
+                TotalConfirmed: 996,
+                NewDeaths: a,
+                TotalDeaths: h,
+                NewRecovered: a,
+                TotalRecovered: 208,
+                Date: b
+            };
+            $[92] = {
+                Country: "Guinea-Bissau",
+                CountryCode: "GW",
+                Slug: "guinea-bissau",
+                NewConfirmed: c,
+                TotalConfirmed: al,
+                NewDeaths: c,
+                TotalDeaths: c,
+                NewRecovered: a,
+                TotalRecovered: e,
+                Date: b
+            };
+            $[93] = {
+                Country: "Guyana",
+                CountryCode: "GY",
+                Slug: "guyana",
+                NewConfirmed: c,
+                TotalConfirmed: aC,
+                NewDeaths: c,
+                TotalDeaths: g,
+                NewRecovered: a,
+                TotalRecovered: l,
+                Date: b
+            };
+            $[94] = {
+                Country: "Haiti",
+                CountryCode: "HT",
+                Slug: "haiti",
+                NewConfirmed: d,
+                TotalConfirmed: aC,
+                NewDeaths: a,
+                TotalDeaths: i,
+                NewRecovered: c,
+                TotalRecovered: h,
+                Date: b
+            };
+            $[95] = {
+                Country: "Heard and Mcdonald Islands",
+                CountryCode: "HM",
+                Slug: "heard-and-mcdonald-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[96] = {
+                Country: "Holy See (Vatican City State)",
+                CountryCode: "VA",
+                Slug: "holy-see-vatican-city-state",
+                NewConfirmed: a,
+                TotalConfirmed: o,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: d,
+                Date: b
+            };
+            $[97] = {
+                Country: "Honduras",
+                CountryCode: "HN",
+                Slug: "honduras",
+                NewConfirmed: a,
+                TotalConfirmed: 627,
+                NewDeaths: a,
+                TotalDeaths: u,
+                NewRecovered: a,
+                TotalRecovered: aD,
+                Date: b
+            };
+            $[98] = {
+                Country: "Hong Kong, SAR China",
+                CountryCode: "HK",
+                Slug: "hong-kong-sar-china",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[99] = {
+                Country: "Hungary",
+                CountryCode: "HU",
+                Slug: "hungary",
+                NewConfirmed: V,
+                TotalConfirmed: az,
+                NewDeaths: j,
+                TotalDeaths: 272,
+                NewRecovered: aB,
+                TotalRecovered: 485,
+                Date: b
+            };
+            $[100] = {
+                Country: "Iceland",
+                CountryCode: "IS",
+                Slug: "iceland",
+                NewConfirmed: d,
+                TotalConfirmed: 1792,
+                NewDeaths: a,
+                TotalDeaths: j,
+                NewRecovered: w,
+                TotalRecovered: 1608,
+                Date: b
+            };
+            $[101] = {
+                Country: "India",
+                CountryCode: "IN",
+                Slug: "india",
+                NewConfirmed: 1607,
+                TotalConfirmed: 27890,
+                NewDeaths: A,
+                TotalDeaths: 881,
+                NewRecovered: 584,
+                TotalRecovered: 6523,
+                Date: b
+            };
+            $[102] = {
+                Country: "Indonesia",
+                CountryCode: "ID",
+                Slug: "indonesia",
+                NewConfirmed: 275,
+                TotalConfirmed: 8882,
+                NewDeaths: C,
+                TotalDeaths: 743,
+                NewRecovered: aD,
+                TotalRecovered: af,
+                Date: b
+            };
+            $[103] = {
+                Country: "Iran, Islamic Republic of",
+                CountryCode: "IR",
+                Slug: "iran",
+                NewConfirmed: 1153,
+                TotalConfirmed: 90481,
+                NewDeaths: 60,
+                TotalDeaths: 5710,
+                NewRecovered: 1464,
+                TotalRecovered: 69657,
+                Date: b
+            };
+            $[104] = {
+                Country: "Iraq",
+                CountryCode: "IQ",
+                Slug: "iraq",
+                NewConfirmed: V,
+                TotalConfirmed: 1820,
+                NewDeaths: c,
+                TotalDeaths: aE,
+                NewRecovered: L,
+                TotalRecovered: 1263,
+                Date: b
+            };
+            $[105] = {
+                Country: "Ireland",
+                CountryCode: "IE",
+                Slug: "ireland",
+                NewConfirmed: 701,
+                TotalConfirmed: 19262,
+                NewDeaths: s,
+                TotalDeaths: 1087,
+                NewRecovered: a,
+                TotalRecovered: 9233,
+                Date: b
+            };
+            $[106] = {
+                Country: "Isle of Man",
+                CountryCode: "IM",
+                Slug: "isle-of-man",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[107] = {
+                Country: "Israel",
+                CountryCode: "IL",
+                Slug: "israel",
+                NewConfirmed: J,
+                TotalConfirmed: 15443,
+                NewDeaths: d,
+                TotalDeaths: aF,
+                NewRecovered: 296,
+                TotalRecovered: 6731,
+                Date: b
+            };
+            $[108] = {
+                Country: "Italy",
+                CountryCode: "IT",
+                Slug: "italy",
+                NewConfirmed: 2324,
+                TotalConfirmed: 197675,
+                NewDeaths: 260,
+                TotalDeaths: 26644,
+                NewRecovered: 1808,
+                TotalRecovered: 64928,
+                Date: b
+            };
+            $[109] = {
+                Country: "Jamaica",
+                CountryCode: "JM",
+                Slug: "jamaica",
+                NewConfirmed: 45,
+                TotalConfirmed: aG,
+                NewDeaths: a,
+                TotalDeaths: h,
+                NewRecovered: a,
+                TotalRecovered: q,
+                Date: b
+            };
+            $[110] = {
+                Country: "Japan",
+                CountryCode: "JP",
+                Slug: "japan",
+                NewConfirmed: 210,
+                TotalConfirmed: 13441,
+                NewDeaths: l,
+                TotalDeaths: 372,
+                NewRecovered: aH,
+                TotalRecovered: 1809,
+                Date: b
+            };
+            $[111] = {
+                Country: "Jersey",
+                CountryCode: "JE",
+                Slug: "jersey",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[112] = {
+                Country: "Jordan",
+                CountryCode: "JO",
+                Slug: "jordan",
+                NewConfirmed: e,
+                TotalConfirmed: 447,
+                NewDeaths: a,
+                TotalDeaths: h,
+                NewRecovered: k,
+                TotalRecovered: 337,
+                Date: b
+            };
+            $[113] = {
+                Country: "Kazakhstan",
+                CountryCode: "KZ",
+                Slug: "kazakhstan",
+                NewConfirmed: 116,
+                TotalConfirmed: 2717,
+                NewDeaths: a,
+                TotalDeaths: x,
+                NewRecovered: 36,
+                TotalRecovered: aI,
+                Date: b
+            };
+            $[114] = {
+                Country: "Kenya",
+                CountryCode: "KE",
+                Slug: "kenya",
+                NewConfirmed: l,
+                TotalConfirmed: 355,
+                NewDeaths: a,
+                TotalDeaths: p,
+                NewRecovered: g,
+                TotalRecovered: ao,
+                Date: b
+            };
+            $[115] = {
+                Country: "Kiribati",
+                CountryCode: "KI",
+                Slug: "kiribati",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[116] = {
+                Country: "Korea (North)",
+                CountryCode: "KP",
+                Slug: "korea-north",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[117] = {
+                Country: "Korea (South)",
+                CountryCode: "KR",
+                Slug: "korea-south",
+                NewConfirmed: j,
+                TotalConfirmed: 10738,
+                NewDeaths: c,
+                TotalDeaths: 243,
+                NewRecovered: aJ,
+                TotalRecovered: 8764,
+                Date: b
+            };
+            $[118] = {
+                Country: "Kuwait",
+                CountryCode: "KW",
+                Slug: "kuwait",
+                NewConfirmed: 183,
+                TotalConfirmed: 3075,
+                NewDeaths: c,
+                TotalDeaths: G,
+                NewRecovered: 150,
+                TotalRecovered: 806,
+                Date: b
+            };
+            $[119] = {
+                Country: "Kyrgyzstan",
+                CountryCode: "KG",
+                Slug: "kyrgyzstan",
+                NewConfirmed: W,
+                TotalConfirmed: aI,
+                NewDeaths: a,
+                TotalDeaths: g,
+                NewRecovered: x,
+                TotalRecovered: 370,
+                Date: b
+            };
+            $[120] = {
+                Country: "Lao PDR",
+                CountryCode: "LA",
+                Slug: "lao-pdr",
+                NewConfirmed: a,
+                TotalConfirmed: r,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: h,
+                Date: b
+            };
+            $[121] = {
+                Country: "Latvia",
+                CountryCode: "LV",
+                Slug: "latvia",
+                NewConfirmed: g,
+                TotalConfirmed: 812,
+                NewDeaths: a,
+                TotalDeaths: l,
+                NewRecovered: a,
+                TotalRecovered: 267,
+                Date: b
+            };
+            $[122] = {
+                Country: "Lebanon",
+                CountryCode: "LB",
+                Slug: "lebanon",
+                NewConfirmed: e,
+                TotalConfirmed: 707,
+                NewDeaths: a,
+                TotalDeaths: s,
+                NewRecovered: d,
+                TotalRecovered: J,
+                Date: b
+            };
+            $[123] = {
+                Country: "Lesotho",
+                CountryCode: "LS",
+                Slug: "lesotho",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[124] = {
+                Country: "Liberia",
+                CountryCode: "LR",
+                Slug: "liberia",
+                NewConfirmed: f,
+                TotalConfirmed: aK,
+                NewDeaths: c,
+                TotalDeaths: l,
+                NewRecovered: a,
+                TotalRecovered: x,
+                Date: b
+            };
+            $[125] = {
+                Country: "Libya",
+                CountryCode: "LY",
+                Slug: "libya",
+                NewConfirmed: a,
+                TotalConfirmed: aL,
+                NewDeaths: a,
+                TotalDeaths: d,
+                NewRecovered: a,
+                TotalRecovered: t,
+                Date: b
+            };
+            $[126] = {
+                Country: "Liechtenstein",
+                CountryCode: "LI",
+                Slug: "liechtenstein",
+                NewConfirmed: c,
+                TotalConfirmed: X,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: a,
+                TotalRecovered: as,
+                Date: b
+            };
+            $[127] = {
+                Country: "Lithuania",
+                CountryCode: "LT",
+                Slug: "lithuania",
+                NewConfirmed: l,
+                TotalConfirmed: 1438,
+                NewDeaths: a,
+                TotalDeaths: T,
+                NewRecovered: h,
+                TotalRecovered: 467,
+                Date: b
+            };
+            $[128] = {
+                Country: "Luxembourg",
+                CountryCode: "LU",
+                Slug: "luxembourg",
+                NewConfirmed: l,
+                TotalConfirmed: 3723,
+                NewDeaths: e,
+                TotalDeaths: S,
+                NewRecovered: v,
+                TotalRecovered: 3104,
+                Date: b
+            };
+            $[129] = {
+                Country: "Macao, SAR China",
+                CountryCode: "MO",
+                Slug: "macao-sar-china",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[130] = {
+                Country: "Macedonia, Republic of",
+                CountryCode: "MK",
+                Slug: "macedonia",
+                NewConfirmed: r,
+                TotalConfirmed: 1386,
+                NewDeaths: d,
+                TotalDeaths: aL,
+                NewRecovered: aa,
+                TotalRecovered: U,
+                Date: b
+            };
+            $[131] = {
+                Country: "Madagascar",
+                CountryCode: "MG",
+                Slug: "madagascar",
+                NewConfirmed: c,
+                TotalConfirmed: aK,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: o,
+                TotalRecovered: 71,
+                Date: b
+            };
+            $[132] = {
+                Country: "Malawi",
+                CountryCode: "MW",
+                Slug: "malawi",
+                NewConfirmed: c,
+                TotalConfirmed: 34,
+                NewDeaths: a,
+                TotalDeaths: e,
+                NewRecovered: a,
+                TotalRecovered: f,
+                Date: b
+            };
+            $[133] = {
+                Country: "Malaysia",
+                CountryCode: "MY",
+                Slug: "malaysia",
+                NewConfirmed: w,
+                TotalConfirmed: 5780,
+                NewDeaths: a,
+                TotalDeaths: aM,
+                NewRecovered: 100,
+                TotalRecovered: 3862,
+                Date: b
+            };
+            $[134] = {
+                Country: "Maldives",
+                CountryCode: "MV",
+                Slug: "maldives",
+                NewConfirmed: 37,
+                TotalConfirmed: 214,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: W,
+                Date: b
+            };
+            $[135] = {
+                Country: "Mali",
+                CountryCode: "ML",
+                Slug: "mali",
+                NewConfirmed: r,
+                TotalConfirmed: 389,
+                NewDeaths: d,
+                TotalDeaths: C,
+                NewRecovered: z,
+                TotalRecovered: ad,
+                Date: b
+            };
+            $[136] = {
+                Country: "Malta",
+                CountryCode: "MT",
+                Slug: "malta",
+                NewConfirmed: a,
+                TotalConfirmed: 448,
+                NewDeaths: a,
+                TotalDeaths: f,
+                NewRecovered: aj,
+                TotalRecovered: 282,
+                Date: b
+            };
+            $[137] = {
+                Country: "Marshall Islands",
+                CountryCode: "MH",
+                Slug: "marshall-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[138] = {
+                Country: "Martinique",
+                CountryCode: "MQ",
+                Slug: "martinique",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[139] = {
+                Country: "Mauritania",
+                CountryCode: "MR",
+                Slug: "mauritania",
+                NewConfirmed: a,
+                TotalConfirmed: h,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: a,
+                TotalRecovered: i,
+                Date: b
+            };
+            $[140] = {
+                Country: "Mauritius",
+                CountryCode: "MU",
+                Slug: "mauritius",
+                NewConfirmed: c,
+                TotalConfirmed: 332,
+                NewDeaths: a,
+                TotalDeaths: o,
+                NewRecovered: f,
+                TotalRecovered: aN,
+                Date: b
+            };
+            $[141] = {
+                Country: "Mayotte",
+                CountryCode: "YT",
+                Slug: "mayotte",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[142] = {
+                Country: "Mexico",
+                CountryCode: "MX",
+                Slug: "mexico",
+                NewConfirmed: 835,
+                TotalConfirmed: 14677,
+                NewDeaths: B,
+                TotalDeaths: 1351,
+                NewRecovered: 1205,
+                TotalRecovered: 8354,
+                Date: b
+            };
+            $[143] = {
+                Country: "Micronesia, Federated States of",
+                CountryCode: "FM",
+                Slug: "micronesia",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[144] = {
+                Country: "Moldova",
+                CountryCode: "MD",
+                Slug: "moldova",
+                NewConfirmed: 104,
+                TotalConfirmed: 3408,
+                NewDeaths: d,
+                TotalDeaths: 96,
+                NewRecovered: Y,
+                TotalRecovered: 895,
+                Date: b
+            };
+            $[145] = {
+                Country: "Monaco",
+                CountryCode: "MC",
+                Slug: "monaco",
+                NewConfirmed: a,
+                TotalConfirmed: 94,
+                NewDeaths: a,
+                TotalDeaths: f,
+                NewRecovered: a,
+                TotalRecovered: O,
+                Date: b
+            };
+            $[146] = {
+                Country: "Mongolia",
+                CountryCode: "MN",
+                Slug: "mongolia",
+                NewConfirmed: c,
+                TotalConfirmed: w,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: o,
+                Date: b
+            };
+            $[147] = {
+                Country: "Montenegro",
+                CountryCode: "ME",
+                Slug: "montenegro",
+                NewConfirmed: c,
+                TotalConfirmed: 321,
+                NewDeaths: c,
+                TotalDeaths: h,
+                NewRecovered: a,
+                TotalRecovered: aH,
+                Date: b
+            };
+            $[148] = {
+                Country: "Montserrat",
+                CountryCode: "MS",
+                Slug: "montserrat",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[149] = {
+                Country: "Morocco",
+                CountryCode: "MA",
+                Slug: "morocco",
+                NewConfirmed: 168,
+                TotalConfirmed: 4065,
+                NewDeaths: d,
+                TotalDeaths: 161,
+                NewRecovered: A,
+                TotalRecovered: 593,
+                Date: b
+            };
+            $[150] = {
+                Country: "Mozambique",
+                CountryCode: "MZ",
+                Slug: "mozambique",
+                NewConfirmed: i,
+                TotalConfirmed: aO,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: l,
+                Date: b
+            };
+            $[151] = {
+                Country: "Myanmar",
+                CountryCode: "MM",
+                Slug: "myanmar",
+                NewConfirmed: a,
+                TotalConfirmed: 146,
+                NewDeaths: a,
+                TotalDeaths: k,
+                NewRecovered: a,
+                TotalRecovered: j,
+                Date: b
+            };
+            $[152] = {
+                Country: "Namibia",
+                CountryCode: "NA",
+                Slug: "namibia",
+                NewConfirmed: a,
+                TotalConfirmed: v,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: c,
+                TotalRecovered: g,
+                Date: b
+            };
+            $[153] = {
+                Country: "Nauru",
+                CountryCode: "NR",
+                Slug: "nauru",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[154] = {
+                Country: "Nepal",
+                CountryCode: "NP",
+                Slug: "nepal",
+                NewConfirmed: e,
+                TotalConfirmed: P,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: f,
+                TotalRecovered: v,
+                Date: b
+            };
+            $[155] = {
+                Country: "Netherlands",
+                CountryCode: "NL",
+                Slug: "netherlands",
+                NewConfirmed: 656,
+                TotalConfirmed: 38040,
+                NewDeaths: 67,
+                TotalDeaths: 4491,
+                NewRecovered: n,
+                TotalRecovered: am,
+                Date: b
+            };
+            $[156] = {
+                Country: "Netherlands Antilles",
+                CountryCode: "AN",
+                Slug: "netherlands-antilles",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[157] = {
+                Country: "New Caledonia",
+                CountryCode: "NC",
+                Slug: "new-caledonia",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[158] = {
+                Country: "Nicaragua",
+                CountryCode: "NI",
+                Slug: "nicaragua",
+                NewConfirmed: c,
+                TotalConfirmed: R,
+                NewDeaths: a,
+                TotalDeaths: e,
+                NewRecovered: a,
+                TotalRecovered: h,
+                Date: b
+            };
+            $[159] = {
+                Country: "Niger",
+                CountryCode: "NE",
+                Slug: "niger",
+                NewConfirmed: l,
+                TotalConfirmed: 696,
+                NewDeaths: d,
+                TotalDeaths: E,
+                NewRecovered: x,
+                TotalRecovered: aG,
+                Date: b
+            };
+            $[160] = {
+                Country: "Nigeria",
+                CountryCode: "NG",
+                Slug: "nigeria",
+                NewConfirmed: aP,
+                TotalConfirmed: 1273,
+                NewDeaths: k,
+                TotalDeaths: ab,
+                NewRecovered: W,
+                TotalRecovered: 239,
+                Date: b
+            };
+            $[161] = {
+                Country: "Niue",
+                CountryCode: "NU",
+                Slug: "niue",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[162] = {
+                Country: "Norfolk Island",
+                CountryCode: "NF",
+                Slug: "norfolk-island",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[163] = {
+                Country: "Northern Mariana Islands",
+                CountryCode: "MP",
+                Slug: "northern-mariana-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[164] = {
+                Country: "Norway",
+                CountryCode: "NO",
+                Slug: "norway",
+                NewConfirmed: q,
+                TotalConfirmed: 7527,
+                NewDeaths: a,
+                TotalDeaths: aF,
+                NewRecovered: a,
+                TotalRecovered: N,
+                Date: b
+            };
+            $[165] = {
+                Country: "Oman",
+                CountryCode: "OM",
+                Slug: "oman",
+                NewConfirmed: Z,
+                TotalConfirmed: 1998,
+                NewDeaths: a,
+                TotalDeaths: j,
+                NewRecovered: f,
+                TotalRecovered: 333,
+                Date: b
+            };
+            $[166] = {
+                Country: "Pakistan",
+                CountryCode: "PK",
+                Slug: "pakistan",
+                NewConfirmed: 605,
+                TotalConfirmed: 13328,
+                NewDeaths: l,
+                TotalDeaths: aQ,
+                NewRecovered: Y,
+                TotalRecovered: 2936,
+                Date: b
+            };
+            $[167] = {
+                Country: "Palau",
+                CountryCode: "PW",
+                Slug: "palau",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[168] = {
+                Country: "Panama",
+                CountryCode: "PA",
+                Slug: "panama",
+                NewConfirmed: 241,
+                TotalConfirmed: 5779,
+                NewDeaths: i,
+                TotalDeaths: 165,
+                NewRecovered: a,
+                TotalRecovered: 338,
+                Date: b
+            };
+            $[169] = {
+                Country: "Papua New Guinea",
+                CountryCode: "PG",
+                Slug: "papua-new-guinea",
+                NewConfirmed: a,
+                TotalConfirmed: g,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[170] = {
+                Country: "Paraguay",
+                CountryCode: "PY",
+                Slug: "paraguay",
+                NewConfirmed: a,
+                TotalConfirmed: 228,
+                NewDeaths: a,
+                TotalDeaths: o,
+                NewRecovered: a,
+                TotalRecovered: 85,
+                Date: b
+            };
+            $[171] = {
+                Country: "Peru",
+                CountryCode: "PE",
+                Slug: "peru",
+                NewConfirmed: 2186,
+                TotalConfirmed: 27517,
+                NewDeaths: q,
+                TotalDeaths: 728,
+                NewRecovered: 291,
+                TotalRecovered: 8088,
+                Date: b
+            };
+            $[172] = {
+                Country: "Philippines",
+                CountryCode: "PH",
+                Slug: "philippines",
+                NewConfirmed: 285,
+                TotalConfirmed: 7579,
+                NewDeaths: h,
+                TotalDeaths: au,
+                NewRecovered: Y,
+                TotalRecovered: 862,
+                Date: b
+            };
+            $[173] = {
+                Country: "Pitcairn",
+                CountryCode: "PN",
+                Slug: "pitcairn",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[174] = {
+                Country: "Poland",
+                CountryCode: "PL",
+                Slug: "poland",
+                NewConfirmed: ac,
+                TotalConfirmed: 11617,
+                NewDeaths: m,
+                TotalDeaths: 535,
+                NewRecovered: aR,
+                TotalRecovered: 2265,
+                Date: b
+            };
+            $[175] = {
+                Country: "Portugal",
+                CountryCode: "PT",
+                Slug: "portugal",
+                NewConfirmed: 472,
+                TotalConfirmed: 23864,
+                NewDeaths: C,
+                TotalDeaths: 903,
+                NewRecovered: P,
+                TotalRecovered: 1329,
+                Date: b
+            };
+            $[176] = {
+                Country: "Puerto Rico",
+                CountryCode: "PR",
+                Slug: "puerto-rico",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[177] = {
+                Country: "Qatar",
+                CountryCode: "QA",
+                Slug: "qatar",
+                NewConfirmed: 929,
+                TotalConfirmed: 10287,
+                NewDeaths: a,
+                TotalDeaths: j,
+                NewRecovered: H,
+                TotalRecovered: 1012,
+                Date: b
+            };
+            $[178] = {
+                Country: "Republic of Kosovo",
+                CountryCode: "XK",
+                Slug: "kosovo",
+                NewConfirmed: a,
+                TotalConfirmed: 510,
+                NewDeaths: a,
+                TotalDeaths: l,
+                NewRecovered: a,
+                TotalRecovered: Z,
+                Date: b
+            };
+            $[179] = {
+                Country: "Romania",
+                CountryCode: "RO",
+                Slug: "romania",
+                NewConfirmed: 401,
+                TotalConfirmed: 11036,
+                NewDeaths: t,
+                TotalDeaths: 619,
+                NewRecovered: 164,
+                TotalRecovered: 3054,
+                Date: b
+            };
+            $[180] = {
+                Country: "Russian Federation",
+                CountryCode: "RU",
+                Slug: "russia",
+                NewConfirmed: 6361,
+                TotalConfirmed: 80949,
+                NewDeaths: ar,
+                TotalDeaths: 747,
+                NewRecovered: 517,
+                TotalRecovered: 6767,
+                Date: b
+            };
+            $[181] = {
+                Country: "Rwanda",
+                CountryCode: "RW",
+                Slug: "rwanda",
+                NewConfirmed: g,
+                TotalConfirmed: 191,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: f,
+                TotalRecovered: av,
+                Date: b
+            };
+            $[182] = {
+                Country: "Réunion",
+                CountryCode: "RE",
+                Slug: "réunion",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[183] = {
+                Country: "Saint Helena",
+                CountryCode: "SH",
+                Slug: "saint-helena",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[184] = {
+                Country: "Saint Kitts and Nevis",
+                CountryCode: "KN",
+                Slug: "saint-kitts-and-nevis",
+                NewConfirmed: a,
+                TotalConfirmed: n,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: d,
+                Date: b
+            };
+            $[185] = {
+                Country: "Saint Lucia",
+                CountryCode: "LC",
+                Slug: "saint-lucia",
+                NewConfirmed: a,
+                TotalConfirmed: n,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: n,
+                Date: b
+            };
+            $[186] = {
+                Country: "Saint Pierre and Miquelon",
+                CountryCode: "PM",
+                Slug: "saint-pierre-and-miquelon",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[187] = {
+                Country: "Saint Vincent and Grenadines",
+                CountryCode: "VC",
+                Slug: "saint-vincent-and-the-grenadines",
+                NewConfirmed: a,
+                TotalConfirmed: p,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: k,
+                Date: b
+            };
+            $[188] = {
+                Country: "Saint-Barthélemy",
+                CountryCode: "BL",
+                Slug: "saint-barthélemy",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[189] = {
+                Country: "Saint-Martin (French part)",
+                CountryCode: "MF",
+                Slug: "saint-martin-french-part",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[190] = {
+                Country: "Samoa",
+                CountryCode: "WS",
+                Slug: "samoa",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[191] = {
+                Country: "San Marino",
+                CountryCode: "SM",
+                Slug: "san-marino",
+                NewConfirmed: x,
+                TotalConfirmed: 538,
+                NewDeaths: c,
+                TotalDeaths: T,
+                NewRecovered: a,
+                TotalRecovered: M,
+                Date: b
+            };
+            $[192] = {
+                Country: "Sao Tome and Principe",
+                CountryCode: "ST",
+                Slug: "sao-tome-and-principe",
+                NewConfirmed: a,
+                TotalConfirmed: f,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[193] = {
+                Country: "Saudi Arabia",
+                CountryCode: "SA",
+                Slug: "saudi-arabia",
+                NewConfirmed: 1223,
+                TotalConfirmed: 17522,
+                NewDeaths: e,
+                TotalDeaths: aR,
+                NewRecovered: 142,
+                TotalRecovered: aS,
+                Date: b
+            };
+            $[194] = {
+                Country: "Senegal",
+                CountryCode: "SN",
+                Slug: "senegal",
+                NewConfirmed: V,
+                TotalConfirmed: 671,
+                NewDeaths: d,
+                TotalDeaths: o,
+                NewRecovered: h,
+                TotalRecovered: 283,
+                Date: b
+            };
+            $[195] = {
+                Country: "Serbia",
+                CountryCode: "RS",
+                Slug: "serbia",
+                NewConfirmed: a,
+                TotalConfirmed: 6630,
+                NewDeaths: a,
+                TotalDeaths: 125,
+                NewRecovered: a,
+                TotalRecovered: an,
+                Date: b
+            };
+            $[196] = {
+                Country: "Seychelles",
+                CountryCode: "SC",
+                Slug: "seychelles",
+                NewConfirmed: a,
+                TotalConfirmed: m,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: i,
+                Date: b
+            };
+            $[197] = {
+                Country: "Sierra Leone",
+                CountryCode: "SL",
+                Slug: "sierra-leone",
+                NewConfirmed: m,
+                TotalConfirmed: Z,
+                NewDeaths: d,
+                TotalDeaths: f,
+                NewRecovered: a,
+                TotalRecovered: j,
+                Date: b
+            };
+            $[198] = {
+                Country: "Singapore",
+                CountryCode: "SG",
+                Slug: "singapore",
+                NewConfirmed: 931,
+                TotalConfirmed: 13624,
+                NewDeaths: a,
+                TotalDeaths: l,
+                NewRecovered: aT,
+                TotalRecovered: 1060,
+                Date: b
+            };
+            $[199] = {
+                Country: "Slovakia",
+                CountryCode: "SK",
+                Slug: "slovakia",
+                NewConfirmed: i,
+                TotalConfirmed: 1379,
+                NewDeaths: c,
+                TotalDeaths: t,
+                NewRecovered: g,
+                TotalRecovered: 394,
+                Date: b
+            };
+            $[200] = {
+                Country: "Slovenia",
+                CountryCode: "SI",
+                Slug: "slovenia",
+                NewConfirmed: g,
+                TotalConfirmed: 1396,
+                NewDeaths: c,
+                TotalDeaths: X,
+                NewRecovered: d,
+                TotalRecovered: 221,
+                Date: b
+            };
+            $[201] = {
+                Country: "Solomon Islands",
+                CountryCode: "SB",
+                Slug: "solomon-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[202] = {
+                Country: "Somalia",
+                CountryCode: "SO",
+                Slug: "somalia",
+                NewConfirmed: B,
+                TotalConfirmed: 436,
+                NewDeaths: k,
+                TotalDeaths: C,
+                NewRecovered: d,
+                TotalRecovered: j,
+                Date: b
+            };
+            $[203] = {
+                Country: "South Africa",
+                CountryCode: "ZA",
+                Slug: "south-africa",
+                NewConfirmed: 185,
+                TotalConfirmed: 4546,
+                NewDeaths: c,
+                TotalDeaths: aE,
+                NewRecovered: a,
+                TotalRecovered: 1473,
+                Date: b
+            };
+            $[204] = {
+                Country: "South Georgia and the South Sandwich Islands",
+                CountryCode: "GS",
+                Slug: "south-georgia-and-the-south-sandwich-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[205] = {
+                Country: "South Sudan",
+                CountryCode: "SS",
+                Slug: "south-sudan",
+                NewConfirmed: c,
+                TotalConfirmed: i,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[206] = {
+                Country: "Spain",
+                CountryCode: "ES",
+                Slug: "spain",
+                NewConfirmed: 2870,
+                TotalConfirmed: 226629,
+                NewDeaths: 288,
+                TotalDeaths: 23190,
+                NewRecovered: 22019,
+                TotalRecovered: 117727,
+                Date: b
+            };
+            $[207] = {
+                Country: "Sri Lanka",
+                CountryCode: "LK",
+                Slug: "sri-lanka",
+                NewConfirmed: 63,
+                TotalConfirmed: 523,
+                NewDeaths: a,
+                TotalDeaths: h,
+                NewRecovered: d,
+                TotalRecovered: 120,
+                Date: b
+            };
+            $[208] = {
+                Country: "Sudan",
+                CountryCode: "SD",
+                Slug: "sudan",
+                NewConfirmed: s,
+                TotalConfirmed: aq,
+                NewDeaths: f,
+                TotalDeaths: z,
+                NewRecovered: c,
+                TotalRecovered: G,
+                Date: b
+            };
+            $[209] = {
+                Country: "Suriname",
+                CountryCode: "SR",
+                Slug: "suriname",
+                NewConfirmed: a,
+                TotalConfirmed: j,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: a,
+                TotalRecovered: h,
+                Date: b
+            };
+            $[210] = {
+                Country: "Svalbard and Jan Mayen Islands",
+                CountryCode: "SJ",
+                Slug: "svalbard-and-jan-mayen-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[211] = {
+                Country: "Swaziland",
+                CountryCode: "SZ",
+                Slug: "swaziland",
+                NewConfirmed: e,
+                TotalConfirmed: u,
+                NewDeaths: a,
+                TotalDeaths: c,
+                NewRecovered: a,
+                TotalRecovered: j,
+                Date: b
+            };
+            $[212] = {
+                Country: "Sweden",
+                CountryCode: "SE",
+                Slug: "sweden",
+                NewConfirmed: 463,
+                TotalConfirmed: 18640,
+                NewDeaths: d,
+                TotalDeaths: 2194,
+                NewRecovered: a,
+                TotalRecovered: 1005,
+                Date: b
+            };
+            $[213] = {
+                Country: "Switzerland",
+                CountryCode: "CH",
+                Slug: "switzerland",
+                NewConfirmed: 167,
+                TotalConfirmed: 29061,
+                NewDeaths: m,
+                TotalDeaths: 1610,
+                NewRecovered: U,
+                TotalRecovered: 21800,
+                Date: b
+            };
+            $[214] = {
+                Country: "Syrian Arab Republic (Syria)",
+                CountryCode: "SY",
+                Slug: "syria",
+                NewConfirmed: c,
+                TotalConfirmed: 43,
+                NewDeaths: a,
+                TotalDeaths: e,
+                NewRecovered: e,
+                TotalRecovered: p,
+                Date: b
+            };
+            $[215] = {
+                Country: "Taiwan, Republic of China",
+                CountryCode: "TW",
+                Slug: "taiwan",
+                NewConfirmed: a,
+                TotalConfirmed: 429,
+                NewDeaths: a,
+                TotalDeaths: i,
+                NewRecovered: i,
+                TotalRecovered: aQ,
+                Date: b
+            };
+            $[216] = {
+                Country: "Tajikistan",
+                CountryCode: "TJ",
+                Slug: "tajikistan",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[217] = {
+                Country: "Tanzania, United Republic of",
+                CountryCode: "TZ",
+                Slug: "tanzania",
+                NewConfirmed: a,
+                TotalConfirmed: aN,
+                NewDeaths: a,
+                TotalDeaths: j,
+                NewRecovered: a,
+                TotalRecovered: 48,
+                Date: b
+            };
+            $[218] = {
+                Country: "Thailand",
+                CountryCode: "TH",
+                Slug: "thailand",
+                NewConfirmed: n,
+                TotalConfirmed: 2922,
+                NewDeaths: a,
+                TotalDeaths: 51,
+                NewRecovered: aJ,
+                TotalRecovered: 2594,
+                Date: b
+            };
+            $[219] = {
+                Country: "Timor-Leste",
+                CountryCode: "TL",
+                Slug: "timor-leste",
+                NewConfirmed: a,
+                TotalConfirmed: s,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: d,
+                Date: b
+            };
+            $[220] = {
+                Country: "Togo",
+                CountryCode: "TG",
+                Slug: "togo",
+                NewConfirmed: d,
+                TotalConfirmed: aM,
+                NewDeaths: a,
+                TotalDeaths: i,
+                NewRecovered: a,
+                TotalRecovered: ay,
+                Date: b
+            };
+            $[221] = {
+                Country: "Tokelau",
+                CountryCode: "TK",
+                Slug: "tokelau",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[222] = {
+                Country: "Tonga",
+                CountryCode: "TO",
+                Slug: "tonga",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[223] = {
+                Country: "Trinidad and Tobago",
+                CountryCode: "TT",
+                Slug: "trinidad-and-tobago",
+                NewConfirmed: a,
+                TotalConfirmed: 115,
+                NewDeaths: a,
+                TotalDeaths: g,
+                NewRecovered: c,
+                TotalRecovered: at,
+                Date: b
+            };
+            $[224] = {
+                Country: "Tunisia",
+                CountryCode: "TN",
+                Slug: "tunisia",
+                NewConfirmed: j,
+                TotalConfirmed: 949,
+                NewDeaths: a,
+                TotalDeaths: w,
+                NewRecovered: o,
+                TotalRecovered: 216,
+                Date: b
+            };
+            $[225] = {
+                Country: "Turkey",
+                CountryCode: "TR",
+                Slug: "turkey",
+                NewConfirmed: aS,
+                TotalConfirmed: 110130,
+                NewDeaths: aA,
+                TotalDeaths: 2805,
+                NewRecovered: 3558,
+                TotalRecovered: 29140,
+                Date: b
+            };
+            $[226] = {
+                Country: "Turkmenistan",
+                CountryCode: "TM",
+                Slug: "turkmenistan",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[227] = {
+                Country: "Turks and Caicos Islands",
+                CountryCode: "TC",
+                Slug: "turks-and-caicos-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[228] = {
+                Country: "Tuvalu",
+                CountryCode: "TV",
+                Slug: "tuvalu",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[229] = {
+                Country: "US Minor Outlying Islands",
+                CountryCode: "UM",
+                Slug: "us-minor-outlying-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[230] = {
+                Country: "Uganda",
+                CountryCode: "UG",
+                Slug: "uganda",
+                NewConfirmed: f,
+                TotalConfirmed: ai,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: B,
+                Date: b
+            };
+            $[231] = {
+                Country: "Ukraine",
+                CountryCode: "UA",
+                Slug: "ukraine",
+                NewConfirmed: 492,
+                TotalConfirmed: 8617,
+                NewDeaths: g,
+                TotalDeaths: aw,
+                NewRecovered: aT,
+                TotalRecovered: 840,
+                Date: b
+            };
+            $[232] = {
+                Country: "United Arab Emirates",
+                CountryCode: "AE",
+                Slug: "united-arab-emirates",
+                NewConfirmed: 536,
+                TotalConfirmed: 10349,
+                NewDeaths: k,
+                TotalDeaths: aO,
+                NewRecovered: aP,
+                TotalRecovered: 1978,
+                Date: b
+            };
+            $[233] = {
+                Country: "United Kingdom",
+                CountryCode: "GB",
+                Slug: "united-kingdom",
+                NewConfirmed: 4468,
+                TotalConfirmed: 154037,
+                NewDeaths: 413,
+                TotalDeaths: 20794,
+                NewRecovered: f,
+                TotalRecovered: 778,
+                Date: b
+            };
+            $[234] = {
+                Country: "United States of America",
+                CountryCode: "US",
+                Slug: "united-states",
+                NewConfirmed: 27619,
+                TotalConfirmed: 964673,
+                NewDeaths: 1124,
+                TotalDeaths: 54848,
+                NewRecovered: 6616,
+                TotalRecovered: 106988,
+                Date: b
+            };
+            $[235] = {
+                Country: "Uruguay",
+                CountryCode: "UY",
+                Slug: "uruguay",
+                NewConfirmed: j,
+                TotalConfirmed: 606,
+                NewDeaths: c,
+                TotalDeaths: n,
+                NewRecovered: k,
+                TotalRecovered: 375,
+                Date: b
+            };
+            $[236] = {
+                Country: "Uzbekistan",
+                CountryCode: "UZ",
+                Slug: "uzbekistan",
+                NewConfirmed: h,
+                TotalConfirmed: 1869,
+                NewDeaths: a,
+                TotalDeaths: g,
+                NewRecovered: X,
+                TotalRecovered: 789,
+                Date: b
+            };
+            $[237] = {
+                Country: "Vanuatu",
+                CountryCode: "VU",
+                Slug: "vanuatu",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[238] = {
+                Country: "Venezuela (Bolivarian Republic)",
+                CountryCode: "VE",
+                Slug: "venezuela",
+                NewConfirmed: d,
+                TotalConfirmed: 325,
+                NewDeaths: a,
+                TotalDeaths: j,
+                NewRecovered: k,
+                TotalRecovered: 137,
+                Date: b
+            };
+            $[239] = {
+                Country: "Viet Nam",
+                CountryCode: "VN",
+                Slug: "vietnam",
+                NewConfirmed: a,
+                TotalConfirmed: 270,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: 225,
+                Date: b
+            };
+            $[240] = {
+                Country: "Virgin Islands, US",
+                CountryCode: "VI",
+                Slug: "virgin-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[241] = {
+                Country: "Wallis and Futuna Islands",
+                CountryCode: "WF",
+                Slug: "wallis-and-futuna-islands",
+                NewConfirmed: a,
+                TotalConfirmed: a,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: a,
+                Date: b
+            };
+            $[242] = {
+                Country: "Western Sahara",
+                CountryCode: "EH",
+                Slug: "western-sahara",
+                NewConfirmed: a,
+                TotalConfirmed: i,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: k,
+                Date: b
+            };
+            $[243] = {
+                Country: "Yemen",
+                CountryCode: "YE",
+                Slug: "yemen",
+                NewConfirmed: a,
+                TotalConfirmed: c,
+                NewDeaths: a,
+                TotalDeaths: a,
+                NewRecovered: a,
+                TotalRecovered: c,
+                Date: b
+            };
+            $[244] = {
+                Country: "Zambia",
+                CountryCode: "ZM",
+                Slug: "zambia",
+                NewConfirmed: f,
+                TotalConfirmed: S,
+                NewDeaths: a,
+                TotalDeaths: e,
+                NewRecovered: k,
+                TotalRecovered: O,
+                Date: b
+            };
+            $[245] = {
+                Country: "Zimbabwe",
+                CountryCode: "ZW",
+                Slug: "zimbabwe",
+                NewConfirmed: a,
+                TotalConfirmed: 31,
+                NewDeaths: a,
+                TotalDeaths: f,
+                NewRecovered: a,
+                TotalRecovered: d,
+                Date: b
+            };
+            return {
+                layout: "default",
+                data: [{}],
+                fetch: [{
+                    countries: $,
+                    selectedCountry: {},
+                    currentCountry: _,
+                    global: _,
+                    loading: false
+                }],
+                error: null,
+                state: {
+                    countries: $,
+                    current: _,
+                    connectionStatus: aU
+                },
+                serverRendered: aU,
+                routePath: "\u002F",
+                logs: []
             }
-        }
+        }(0, "2020-04-27T08:44:37Z", 1, 2, 3, 4, 8, 7, 6, 10, 5, 12, 11, 15, 9, 14, 28, 19, 24, 18, 59, 16, 38, 25, 30,
+            21, 56, 46, 23, 50, 29, 26, 20, 83, 22, 145, 122, 39, 64, 32, 42, 52, 49, 13, 88, 41, 500, 57, 17, 82, 70,
+            93, {}, Array(246), 126, 40, 344, 112, 77, 1107, 69, 80, 79, 33, 123, 53, 117, 870, 106, 278, 237, 66, 55, 54,
+            501, 92, 209, 576, 62, 2500, 99, 27, 74, 65, 87, 201, 350, 153, 682, 47, 124, 61, 98, 299, 76, 91, 281, 139,
+            2357, 58, true));
     </script>
-    <script src="/_nuxt/32c089955f960f996596.js" defer></script>
-    <script src="/_nuxt/8ecbd9642bb1c1ca7992.js" defer></script>
-    <script src="/_nuxt/398fd96584dd834970d3.js" defer></script>
-    <script src="/_nuxt/e207a692be8222454a59.js" defer></script>
+    <script src="/_nuxt/runtime.js" defer></script>
+    <script src="/_nuxt/commons.app.js" defer></script>
+    <script src="/_nuxt/vendors.app.js" defer></script>
+    <script src="/_nuxt/app.js" defer></script>
     <script data-n-head="ssr" src="/js/jquery-3.2.1.js" data-body="true"></script>
-    <script data-n-head="ssr" src="/js/bootstrap-select.js" data-body="true"></script>
     <script data-n-head="ssr" src="/fonts/fontawesome-all.js" data-body="true"></script>
-    <script data-n-head="ssr" src="/js/bootstrap/bootstrap.bundle.min.js" data-body="true"></script>
+    <script data-n-head="ssr" src="/js/bootstrap-select.js" data-body="true"></script>
+    <script data-n-head="ssr" src="/js/bootstrap/bootstrap.bundle.js" data-body="true"></script>
 </body>
 
 </html>

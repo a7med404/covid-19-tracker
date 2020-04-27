@@ -12,7 +12,9 @@ export const getters = {
 }
 
 export const mutations = {
-    SET_COUNTRIES: (state, countries) => (state.countries = countries),
+    SET_COUNTRIES: (state, countries) => {
+        state.countries = countries
+    },
     CURRENT_COUNTRY: (state, payload) => (state.current = payload),
     SET_CONNECTION_STATUS: (state, status) => (state.connectionStatus = status)
 }

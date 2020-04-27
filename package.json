@@ -17,7 +17,8 @@
         "@nuxtjs/dotenv": "^1.4.0",
         "@nuxtjs/pwa": "^3.0.0-0",
         "nuxt": "^2.0.0",
-        "swiper": "^5.3.6"
+        "swiper": "^5.3.6",
+        "vue-select": "^3.10.2"
     },
     "devDependencies": {
         "@nuxtjs/eslint-config": "^2.0.0",
